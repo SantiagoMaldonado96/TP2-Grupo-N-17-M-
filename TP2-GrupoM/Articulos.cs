@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace TP2_GrupoM
 {
-    public partial class Form1 : Form
+    public partial class Articulos : Form
     {
-        public Form1()
+        public Articulos()
         {
             InitializeComponent();
         }
 
-        private void btnArticulos_Click(object sender, EventArgs e)
+        private void Articulos_Load(object sender, EventArgs e)
         {
-            Articulos ventana = new Articulos();
-            ventana.ShowDialog();
+
         }
     }
 }
