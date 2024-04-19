@@ -43,5 +43,11 @@ namespace TP2_GrupoM
             frmAgregarArt ventana = new frmAgregarArt();
             ventana.ShowDialog();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscarArt ventana = new frmBuscarArt();
+            ventana.ShowDialog();
+        }
     }
 }

@@ -98,14 +98,14 @@
             this.txbPrecio.Location = new System.Drawing.Point(192, 276);
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(100, 20);
-            this.txbPrecio.TabIndex = 2;
+            this.txbPrecio.TabIndex = 5;
             // 
             // txbNombreArt
             // 
             this.txbNombreArt.Location = new System.Drawing.Point(192, 158);
             this.txbNombreArt.Name = "txbNombreArt";
             this.txbNombreArt.Size = new System.Drawing.Size(100, 20);
-            this.txbNombreArt.TabIndex = 2;
+            this.txbNombreArt.TabIndex = 1;
             // 
             // txbDescArt
             // 
@@ -146,7 +146,7 @@
             this.cboCatArt.Location = new System.Drawing.Point(192, 246);
             this.cboCatArt.Name = "cboCatArt";
             this.cboCatArt.Size = new System.Drawing.Size(100, 21);
-            this.cboCatArt.TabIndex = 3;
+            this.cboCatArt.TabIndex = 4;
             // 
             // lblCodAuto
             // 
@@ -161,7 +161,7 @@
             this.btnAgregarArt.Location = new System.Drawing.Point(149, 354);
             this.btnAgregarArt.Name = "btnAgregarArt";
             this.btnAgregarArt.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarArt.TabIndex = 4;
+            this.btnAgregarArt.TabIndex = 7;
             this.btnAgregarArt.Text = "Agregar";
             this.btnAgregarArt.UseVisualStyleBackColor = true;
             // 
@@ -170,7 +170,7 @@
             this.btnCancelarAgregar.Location = new System.Drawing.Point(240, 354);
             this.btnCancelarAgregar.Name = "btnCancelarAgregar";
             this.btnCancelarAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarAgregar.TabIndex = 4;
+            this.btnCancelarAgregar.TabIndex = 8;
             this.btnCancelarAgregar.Text = "Cancelar";
             this.btnCancelarAgregar.UseVisualStyleBackColor = true;
             // 
@@ -188,7 +188,7 @@
             this.txbUrlImagen.Location = new System.Drawing.Point(193, 308);
             this.txbUrlImagen.Name = "txbUrlImagen";
             this.txbUrlImagen.Size = new System.Drawing.Size(100, 20);
-            this.txbUrlImagen.TabIndex = 2;
+            this.txbUrlImagen.TabIndex = 6;
             // 
             // frmAgregarArt
             // 
