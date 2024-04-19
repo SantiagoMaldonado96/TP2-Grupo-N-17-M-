@@ -177,14 +177,14 @@
             // 
             // txbUrlImagen
             // 
-            this.txbUrlImagen.Location = new System.Drawing.Point(193, 308);
+            this.txbUrlImagen.Location = new System.Drawing.Point(192, 308);
             this.txbUrlImagen.Name = "txbUrlImagen";
             this.txbUrlImagen.Size = new System.Drawing.Size(100, 20);
             this.txbUrlImagen.TabIndex = 6;
             // 
             // txbCodigoArt
             // 
-            this.txbCodigoArt.Location = new System.Drawing.Point(193, 128);
+            this.txbCodigoArt.Location = new System.Drawing.Point(192, 128);
             this.txbCodigoArt.Name = "txbCodigoArt";
             this.txbCodigoArt.Size = new System.Drawing.Size(100, 20);
             this.txbCodigoArt.TabIndex = 9;
@@ -213,7 +213,7 @@
             this.Controls.Add(this.lblAgregar);
             this.Name = "frmAgregarArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmAgregarArt";
+            this.Text = "v";
             this.ResumeLayout(false);
             this.PerformLayout();
 

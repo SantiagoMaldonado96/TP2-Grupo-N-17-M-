@@ -59,7 +59,7 @@
             // btnMarcas
             // 
             this.btnMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnMarcas.Location = new System.Drawing.Point(215, 205);
+            this.btnMarcas.Location = new System.Drawing.Point(215, 154);
             this.btnMarcas.Name = "btnMarcas";
             this.btnMarcas.Size = new System.Drawing.Size(139, 29);
             this.btnMarcas.TabIndex = 2;
@@ -70,7 +70,7 @@
             // btnCategorias
             // 
             this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnCategorias.Location = new System.Drawing.Point(215, 158);
+            this.btnCategorias.Location = new System.Drawing.Point(215, 198);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(139, 29);
             this.btnCategorias.TabIndex = 3;

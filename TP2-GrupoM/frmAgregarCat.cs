@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace TP2_GrupoM
 {
-    public partial class frmMarcas : Form
+    public partial class frmAgregarCat : Form
     {
-        public frmMarcas()
+        public frmAgregarCat()
         {
             InitializeComponent();
-        }
-
-        private void btnAgregarMarca_Click(object sender, EventArgs e)
-        {
-            frmAgregarMarca ventana = new frmAgregarMarca();   
-            ventana.ShowDialog();
         }
     }
 }

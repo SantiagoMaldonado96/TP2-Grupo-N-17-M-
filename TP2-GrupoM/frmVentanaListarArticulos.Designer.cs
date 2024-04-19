@@ -34,9 +34,9 @@ namespace TP2_GrupoM
             this.sstCantidadArticulos = new System.Windows.Forms.StatusStrip();
             this.stlblCantidadArticulos = new System.Windows.Forms.ToolStripStatusLabel();
             this.stlblNumeroArticulos = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnAgregarArt = new System.Windows.Forms.Button();
+            this.btnModificarArt = new System.Windows.Forms.Button();
+            this.btnEliminarArt = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.sstCantidadArticulos.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +63,7 @@ namespace TP2_GrupoM
             this.lwArticulos.HideSelection = false;
             this.lwArticulos.Location = new System.Drawing.Point(26, 81);
             this.lwArticulos.Name = "lwArticulos";
-            this.lwArticulos.Size = new System.Drawing.Size(690, 333);
+            this.lwArticulos.Size = new System.Drawing.Size(642, 288);
             this.lwArticulos.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lwArticulos.TabIndex = 1;
             this.lwArticulos.UseCompatibleStateImageBehavior = false;
@@ -73,9 +73,9 @@ namespace TP2_GrupoM
             this.sstCantidadArticulos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stlblCantidadArticulos,
             this.stlblNumeroArticulos});
-            this.sstCantidadArticulos.Location = new System.Drawing.Point(0, 481);
+            this.sstCantidadArticulos.Location = new System.Drawing.Point(0, 436);
             this.sstCantidadArticulos.Name = "sstCantidadArticulos";
-            this.sstCantidadArticulos.Size = new System.Drawing.Size(756, 22);
+            this.sstCantidadArticulos.Size = new System.Drawing.Size(708, 22);
             this.sstCantidadArticulos.TabIndex = 2;
             this.sstCantidadArticulos.Text = "statusStrip1";
             // 
@@ -92,41 +92,41 @@ namespace TP2_GrupoM
             this.stlblNumeroArticulos.Size = new System.Drawing.Size(174, 17);
             this.stlblNumeroArticulos.Text = "\"Cantidad de Art. en el sistema\"";
             // 
-            // btnAgregar
+            // btnAgregarArt
             // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregar.Location = new System.Drawing.Point(24, 437);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 3;
-            this.btnAgregar.Text = "Agregar...";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnAgregarArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAgregarArt.Location = new System.Drawing.Point(24, 392);
+            this.btnAgregarArt.Name = "btnAgregarArt";
+            this.btnAgregarArt.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarArt.TabIndex = 3;
+            this.btnAgregarArt.Text = "Agregar...";
+            this.btnAgregarArt.UseVisualStyleBackColor = true;
+            this.btnAgregarArt.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // btnModificar
+            // btnModificarArt
             // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnModificar.Location = new System.Drawing.Point(121, 437);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 3;
-            this.btnModificar.Text = "Modificar...";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificarArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnModificarArt.Location = new System.Drawing.Point(121, 392);
+            this.btnModificarArt.Name = "btnModificarArt";
+            this.btnModificarArt.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarArt.TabIndex = 3;
+            this.btnModificarArt.Text = "Modificar...";
+            this.btnModificarArt.UseVisualStyleBackColor = true;
             // 
-            // btnEliminar
+            // btnEliminarArt
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminar.Location = new System.Drawing.Point(215, 437);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 3;
-            this.btnEliminar.Text = "Eliminar...";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminarArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEliminarArt.Location = new System.Drawing.Point(215, 392);
+            this.btnEliminarArt.Name = "btnEliminarArt";
+            this.btnEliminarArt.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarArt.TabIndex = 3;
+            this.btnEliminarArt.Text = "Eliminar...";
+            this.btnEliminarArt.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(644, 437);
+            this.btnSalir.Location = new System.Drawing.Point(596, 392);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
@@ -137,11 +137,11 @@ namespace TP2_GrupoM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 503);
+            this.ClientSize = new System.Drawing.Size(708, 458);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnEliminarArt);
+            this.Controls.Add(this.btnModificarArt);
+            this.Controls.Add(this.btnAgregarArt);
             this.Controls.Add(this.sstCantidadArticulos);
             this.Controls.Add(this.lwArticulos);
             this.Controls.Add(this.lblTituloListadoArticulos);
@@ -164,9 +164,9 @@ namespace TP2_GrupoM
         private System.Windows.Forms.StatusStrip sstCantidadArticulos;
         private System.Windows.Forms.ToolStripStatusLabel stlblCantidadArticulos;
         private System.Windows.Forms.ToolStripStatusLabel stlblNumeroArticulos;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnAgregarArt;
+        private System.Windows.Forms.Button btnModificarArt;
+        private System.Windows.Forms.Button btnEliminarArt;
         private System.Windows.Forms.Button btnSalir;
     }
 }

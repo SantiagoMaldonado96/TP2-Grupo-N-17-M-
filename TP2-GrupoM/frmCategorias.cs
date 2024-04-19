@@ -17,34 +17,10 @@ namespace TP2_GrupoM
             InitializeComponent();
         }
 
-        private void lblArticulos_Click(object sender, EventArgs e)
+        private void btnAgregarCat_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnListar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-
+            frmAgregarCat ventana = new frmAgregarCat();
+            ventana.ShowDialog();
         }
     }
 }
