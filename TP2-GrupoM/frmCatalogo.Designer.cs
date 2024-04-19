@@ -1,6 +1,6 @@
 ﻿namespace TP2_GrupoM
 {
-    partial class Form1
+    partial class frmCatalogo
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -59,24 +59,26 @@
             // btnMarcas
             // 
             this.btnMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnMarcas.Location = new System.Drawing.Point(215, 155);
+            this.btnMarcas.Location = new System.Drawing.Point(215, 205);
             this.btnMarcas.Name = "btnMarcas";
             this.btnMarcas.Size = new System.Drawing.Size(139, 29);
             this.btnMarcas.TabIndex = 2;
             this.btnMarcas.Text = "Marcas";
             this.btnMarcas.UseVisualStyleBackColor = true;
+            this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
             // 
             // btnCategorias
             // 
             this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnCategorias.Location = new System.Drawing.Point(215, 202);
+            this.btnCategorias.Location = new System.Drawing.Point(215, 158);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(139, 29);
             this.btnCategorias.TabIndex = 3;
             this.btnCategorias.Text = "Categorias";
             this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
-            // Form1
+            // frmCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -85,7 +87,7 @@
             this.Controls.Add(this.btnMarcas);
             this.Controls.Add(this.btnArticulos);
             this.Controls.Add(this.lblTitulo);
-            this.Name = "Form1";
+            this.Name = "frmCatalogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalogo";
             this.ResumeLayout(false);

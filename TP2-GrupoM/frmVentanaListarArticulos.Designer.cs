@@ -98,7 +98,7 @@ namespace TP2_GrupoM
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmVentanaListarArticulos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Articulos";
             this.sstCantidadArticulos.ResumeLayout(false);
             this.sstCantidadArticulos.PerformLayout();

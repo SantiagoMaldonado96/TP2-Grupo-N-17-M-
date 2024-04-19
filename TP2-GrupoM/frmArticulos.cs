@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TP2_GrupoM
 {
-    public partial class Articulos : Form
+    public partial class frmArticulos : Form
     {
-        public Articulos()
+        public frmArticulos()
         {
             InitializeComponent();
         }
@@ -36,6 +36,12 @@ namespace TP2_GrupoM
             frmVentanaListarArticulos ventanaListarArticulos = new frmVentanaListarArticulos();
             ventanaListarArticulos.Show();
             
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregarArt ventana = new frmAgregarArt();
+            ventana.ShowDialog();
         }
     }
 }
