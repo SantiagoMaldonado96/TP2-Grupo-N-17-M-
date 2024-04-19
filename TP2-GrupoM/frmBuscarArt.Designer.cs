@@ -41,7 +41,7 @@
             // 
             this.lblBuscarArt.AutoSize = true;
             this.lblBuscarArt.Font = new System.Drawing.Font("MS Reference Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarArt.Location = new System.Drawing.Point(82, 29);
+            this.lblBuscarArt.Location = new System.Drawing.Point(88, 24);
             this.lblBuscarArt.Name = "lblBuscarArt";
             this.lblBuscarArt.Size = new System.Drawing.Size(272, 40);
             this.lblBuscarArt.TabIndex = 0;

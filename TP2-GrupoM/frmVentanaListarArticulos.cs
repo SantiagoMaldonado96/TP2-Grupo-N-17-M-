@@ -17,6 +17,10 @@ namespace TP2_GrupoM
             InitializeComponent();
         }
 
-        
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregarArt ventana = new frmAgregarArt();
+            ventana.ShowDialog();
+        }
     }
 }

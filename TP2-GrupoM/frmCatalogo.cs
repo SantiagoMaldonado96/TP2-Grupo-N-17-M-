@@ -19,7 +19,7 @@ namespace TP2_GrupoM
 
         private void btnArticulos_Click(object sender, EventArgs e)
         {
-            frmArticulos ventana = new frmArticulos();
+            frmVentanaListarArticulos ventana = new frmVentanaListarArticulos();
             ventana.ShowDialog();
         }
 
