@@ -21,5 +21,21 @@ namespace TP2_GrupoM
         {
 
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            //Se podria crear alguna funcion, pasando el  tipo, para poder replicar en otras ventanas
+            foreach (var item in Application.OpenForms)     
+            {
+                if(item.GetType() == typeof(frmVentanaListarArticulos))
+                {
+                    MessageBox.Show("Ventana ya abierta");
+                    return;
+                }
+            }
+            frmVentanaListarArticulos ventanaListarArticulos = new frmVentanaListarArticulos();
+            ventanaListarArticulos.Show();
+            
+        }
     }
 }
