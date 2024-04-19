@@ -156,6 +156,7 @@
             this.btnAgregarArt.TabIndex = 7;
             this.btnAgregarArt.Text = "Agregar";
             this.btnAgregarArt.UseVisualStyleBackColor = true;
+            this.btnAgregarArt.Click += new System.EventHandler(this.btnAgregarArt_Click);
             // 
             // btnCancelarAgregar
             // 

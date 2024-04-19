@@ -17,5 +17,18 @@ namespace TP2_GrupoM
             InitializeComponent();
         }
 
+        private void btnAgregarArt_Click(object sender, EventArgs e)
+        {
+            Articulo articulo = new Articulo();
+            articulo.CodigoArticulo = int.Parse(txbCodigoArt.Text);
+            articulo.Nombre = txbNombreArt.Text;
+            articulo.Descripcion = txbDescArt.Text; 
+            articulo.Marca = cboMarcaArt.Text;
+            articulo.Categoria = cboCatArt.Text;
+            articulo.Precio = (float)int.Parse(txbPrecio.Text);
+
+            MessageBox.Show("nombre:" + articulo.Nombre + "\ncodigo:" + articulo.CodigoArticulo + "\ndescripcion:" + articulo.Descripcion + "\nprecio:" + articulo.Precio);
+            
+        }
     }
 }
