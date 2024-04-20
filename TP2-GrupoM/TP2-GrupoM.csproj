@@ -47,6 +47,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Articulo.cs" />
+    <Compile Include="EliminarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarArticulo.Designer.cs">
+      <DependentUpon>EliminarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarCategoria.Designer.cs">
+      <DependentUpon>EliminarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarMarca.Designer.cs">
+      <DependentUpon>EliminarMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAgregarArt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +117,9 @@
     <Compile Include="Marca.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EliminarMarca.resx">
+      <DependentUpon>EliminarMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAgregarArt.resx">
       <DependentUpon>frmAgregarArt.cs</DependentUpon>
     </EmbeddedResource>
