@@ -25,7 +25,8 @@ namespace TP2_GrupoM
 
         private void btnEliminarMarca_Click(object sender, EventArgs e)
         {
-            
+            EliminarMarca ventana = new EliminarMarca();
+            ventana.ShowDialog();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

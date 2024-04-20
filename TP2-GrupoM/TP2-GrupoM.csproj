@@ -117,6 +117,12 @@
     <Compile Include="Marca.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EliminarArticulo.resx">
+      <DependentUpon>EliminarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarCategoria.resx">
+      <DependentUpon>EliminarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EliminarMarca.resx">
       <DependentUpon>EliminarMarca.cs</DependentUpon>
     </EmbeddedResource>

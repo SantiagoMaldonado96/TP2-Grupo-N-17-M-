@@ -27,5 +27,11 @@ namespace TP2_GrupoM
         {
             this.Close();
         }
+
+        private void btnEliminarCat_Click(object sender, EventArgs e)
+        {
+            EliminarCategoria ventana = new EliminarCategoria();
+            ventana.ShowDialog();
+        }
     }
 }

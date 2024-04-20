@@ -37,5 +37,11 @@ namespace TP2_GrupoM
         {
             this.Close();
         }
+
+        private void btnEliminarArt_Click(object sender, EventArgs e)
+        {
+            EliminarArticulo ventana = new EliminarArticulo();
+            ventana.ShowDialog();
+        }
     }
 }

@@ -31,6 +31,12 @@ namespace TP2_GrupoM
         {
             this.lblTituloListadoArticulos = new System.Windows.Forms.Label();
             this.lwArticulos = new System.Windows.Forms.ListView();
+            this.NombreArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CodigoArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DescripcionArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MarcaArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CategoriaArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PrecioArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sstCantidadArticulos = new System.Windows.Forms.StatusStrip();
             this.stlblCantidadArticulos = new System.Windows.Forms.ToolStripStatusLabel();
             this.stlblNumeroArticulos = new System.Windows.Forms.ToolStripStatusLabel();
@@ -38,12 +44,6 @@ namespace TP2_GrupoM
             this.btnModificarArt = new System.Windows.Forms.Button();
             this.btnEliminarArt = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.NombreArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CodigoArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DescripcionArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MarcaArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CategoriaArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.PrecioArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sstCantidadArticulos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +83,36 @@ namespace TP2_GrupoM
             this.lwArticulos.TabIndex = 1;
             this.lwArticulos.UseCompatibleStateImageBehavior = false;
             this.lwArticulos.View = System.Windows.Forms.View.Details;
+            // 
+            // NombreArt
+            // 
+            this.NombreArt.Text = "Nombre";
+            this.NombreArt.Width = 117;
+            // 
+            // CodigoArt
+            // 
+            this.CodigoArt.Text = "Codigo";
+            this.CodigoArt.Width = 70;
+            // 
+            // DescripcionArt
+            // 
+            this.DescripcionArt.Text = "Descripcion";
+            this.DescripcionArt.Width = 106;
+            // 
+            // MarcaArt
+            // 
+            this.MarcaArt.Text = "Marca";
+            this.MarcaArt.Width = 87;
+            // 
+            // CategoriaArt
+            // 
+            this.CategoriaArt.Text = "Categoria";
+            this.CategoriaArt.Width = 201;
+            // 
+            // PrecioArt
+            // 
+            this.PrecioArt.Text = "Precio";
+            this.PrecioArt.Width = 56;
             // 
             // sstCantidadArticulos
             // 
@@ -139,6 +169,7 @@ namespace TP2_GrupoM
             this.btnEliminarArt.TabIndex = 3;
             this.btnEliminarArt.Text = "Eliminar...";
             this.btnEliminarArt.UseVisualStyleBackColor = true;
+            this.btnEliminarArt.Click += new System.EventHandler(this.btnEliminarArt_Click);
             // 
             // btnSalir
             // 
@@ -150,36 +181,6 @@ namespace TP2_GrupoM
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // NombreArt
-            // 
-            this.NombreArt.Text = "Nombre";
-            this.NombreArt.Width = 117;
-            // 
-            // CodigoArt
-            // 
-            this.CodigoArt.Text = "Codigo";
-            this.CodigoArt.Width = 70;
-            // 
-            // DescripcionArt
-            // 
-            this.DescripcionArt.Text = "Descripcion";
-            this.DescripcionArt.Width = 106;
-            // 
-            // MarcaArt
-            // 
-            this.MarcaArt.Text = "Marca";
-            this.MarcaArt.Width = 87;
-            // 
-            // CategoriaArt
-            // 
-            this.CategoriaArt.Text = "Categoria";
-            this.CategoriaArt.Width = 201;
-            // 
-            // PrecioArt
-            // 
-            this.PrecioArt.Text = "Precio";
-            this.PrecioArt.Width = 56;
             // 
             // frmVentanaListarArticulos
             // 
