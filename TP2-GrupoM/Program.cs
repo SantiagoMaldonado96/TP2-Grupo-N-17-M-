@@ -17,7 +17,7 @@ namespace TP2_GrupoM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmCatalogo());
-            List<Articulo> listaArt = new List<Articulo>();
+            
         }
     }
 }

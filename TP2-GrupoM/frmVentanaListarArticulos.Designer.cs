@@ -38,6 +38,12 @@ namespace TP2_GrupoM
             this.btnModificarArt = new System.Windows.Forms.Button();
             this.btnEliminarArt = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.NombreArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CodigoArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DescripcionArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MarcaArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CategoriaArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PrecioArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sstCantidadArticulos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +65,16 @@ namespace TP2_GrupoM
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lwArticulos.BackColor = System.Drawing.SystemColors.Info;
+            this.lwArticulos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.NombreArt,
+            this.CodigoArt,
+            this.DescripcionArt,
+            this.MarcaArt,
+            this.CategoriaArt,
+            this.PrecioArt});
             this.lwArticulos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lwArticulos.FullRowSelect = true;
+            this.lwArticulos.GridLines = true;
             this.lwArticulos.HideSelection = false;
             this.lwArticulos.Location = new System.Drawing.Point(26, 81);
             this.lwArticulos.Name = "lwArticulos";
@@ -67,6 +82,7 @@ namespace TP2_GrupoM
             this.lwArticulos.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lwArticulos.TabIndex = 1;
             this.lwArticulos.UseCompatibleStateImageBehavior = false;
+            this.lwArticulos.View = System.Windows.Forms.View.Details;
             // 
             // sstCantidadArticulos
             // 
@@ -112,6 +128,7 @@ namespace TP2_GrupoM
             this.btnModificarArt.TabIndex = 3;
             this.btnModificarArt.Text = "Modificar...";
             this.btnModificarArt.UseVisualStyleBackColor = true;
+            this.btnModificarArt.Click += new System.EventHandler(this.btnModificarArt_Click);
             // 
             // btnEliminarArt
             // 
@@ -132,6 +149,37 @@ namespace TP2_GrupoM
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // NombreArt
+            // 
+            this.NombreArt.Text = "Nombre";
+            this.NombreArt.Width = 117;
+            // 
+            // CodigoArt
+            // 
+            this.CodigoArt.Text = "Codigo";
+            this.CodigoArt.Width = 70;
+            // 
+            // DescripcionArt
+            // 
+            this.DescripcionArt.Text = "Descripcion";
+            this.DescripcionArt.Width = 106;
+            // 
+            // MarcaArt
+            // 
+            this.MarcaArt.Text = "Marca";
+            this.MarcaArt.Width = 87;
+            // 
+            // CategoriaArt
+            // 
+            this.CategoriaArt.Text = "Categoria";
+            this.CategoriaArt.Width = 201;
+            // 
+            // PrecioArt
+            // 
+            this.PrecioArt.Text = "Precio";
+            this.PrecioArt.Width = 56;
             // 
             // frmVentanaListarArticulos
             // 
@@ -150,6 +198,7 @@ namespace TP2_GrupoM
             this.Name = "frmVentanaListarArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Articulos";
+            this.Load += new System.EventHandler(this.frmVentanaListarArticulos_Load);
             this.sstCantidadArticulos.ResumeLayout(false);
             this.sstCantidadArticulos.PerformLayout();
             this.ResumeLayout(false);
@@ -168,5 +217,11 @@ namespace TP2_GrupoM
         private System.Windows.Forms.Button btnModificarArt;
         private System.Windows.Forms.Button btnEliminarArt;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ColumnHeader NombreArt;
+        private System.Windows.Forms.ColumnHeader CodigoArt;
+        private System.Windows.Forms.ColumnHeader DescripcionArt;
+        private System.Windows.Forms.ColumnHeader MarcaArt;
+        private System.Windows.Forms.ColumnHeader CategoriaArt;
+        private System.Windows.Forms.ColumnHeader PrecioArt;
     }
 }

@@ -154,7 +154,7 @@
             this.btnAgregarArt.Name = "btnAgregarArt";
             this.btnAgregarArt.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarArt.TabIndex = 7;
-            this.btnAgregarArt.Text = "Agregar";
+            this.btnAgregarArt.Text = "Aceptar";
             this.btnAgregarArt.UseVisualStyleBackColor = true;
             this.btnAgregarArt.Click += new System.EventHandler(this.btnAgregarArt_Click);
             // 

@@ -12,6 +12,7 @@ namespace TP2_GrupoM
 {
     public partial class frmVentanaListarArticulos : Form
     {
+
         public frmVentanaListarArticulos()
         {
             InitializeComponent();
@@ -21,6 +22,20 @@ namespace TP2_GrupoM
         {
             frmAgregarArt ventana = new frmAgregarArt();
             ventana.ShowDialog();
+        }
+
+        private void frmVentanaListarArticulos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificarArt_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
