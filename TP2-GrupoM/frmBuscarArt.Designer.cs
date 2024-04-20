@@ -96,6 +96,7 @@
             this.btnCancelarBuscar.TabIndex = 3;
             this.btnCancelarBuscar.Text = "Cancelar";
             this.btnCancelarBuscar.UseVisualStyleBackColor = true;
+            this.btnCancelarBuscar.Click += new System.EventHandler(this.btnCancelarBuscar_Click);
             // 
             // frmBuscarArt
             // 

@@ -16,5 +16,10 @@ namespace TP2_GrupoM
         {
             InitializeComponent();
         }
+
+        private void btnCancelarBuscar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

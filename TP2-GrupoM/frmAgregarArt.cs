@@ -47,5 +47,11 @@ namespace TP2_GrupoM
             txbUrlImagen.Text = "";
 
         }
+
+        private void btnCancelarAgregar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

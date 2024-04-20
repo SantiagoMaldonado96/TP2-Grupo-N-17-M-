@@ -22,5 +22,10 @@ namespace TP2_GrupoM
             frmAgregarCat ventana = new frmAgregarCat();
             ventana.ShowDialog();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

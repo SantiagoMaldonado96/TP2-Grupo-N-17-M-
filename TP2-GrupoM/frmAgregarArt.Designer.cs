@@ -166,6 +166,7 @@
             this.btnCancelarAgregar.TabIndex = 8;
             this.btnCancelarAgregar.Text = "Cancelar";
             this.btnCancelarAgregar.UseVisualStyleBackColor = true;
+            this.btnCancelarAgregar.Click += new System.EventHandler(this.btnCancelarAgregar_Click);
             // 
             // lblLinkImagen
             // 

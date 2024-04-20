@@ -16,5 +16,10 @@ namespace TP2_GrupoM
         {
             InitializeComponent();
         }
+
+        private void btnCancelarCat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

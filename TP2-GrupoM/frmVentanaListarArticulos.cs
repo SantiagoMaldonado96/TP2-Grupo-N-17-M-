@@ -35,7 +35,7 @@ namespace TP2_GrupoM
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-           
+            this.Close();
         }
     }
 }

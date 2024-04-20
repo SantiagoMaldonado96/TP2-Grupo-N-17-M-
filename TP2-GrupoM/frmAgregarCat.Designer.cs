@@ -45,6 +45,7 @@
             this.btnCancelarCat.TabIndex = 22;
             this.btnCancelarCat.Text = "Cancelar";
             this.btnCancelarCat.UseVisualStyleBackColor = true;
+            this.btnCancelarCat.Click += new System.EventHandler(this.btnCancelarCat_Click);
             // 
             // btnAgregarCat
             // 
