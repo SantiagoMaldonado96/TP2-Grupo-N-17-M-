@@ -42,7 +42,7 @@
             this.btnSalir.Location = new System.Drawing.Point(603, 394);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 10;
+            this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -53,7 +53,7 @@
             this.btnEliminarMarca.Location = new System.Drawing.Point(222, 394);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
             this.btnEliminarMarca.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarMarca.TabIndex = 7;
+            this.btnEliminarMarca.TabIndex = 3;
             this.btnEliminarMarca.Text = "Eliminar...";
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
             this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
@@ -64,7 +64,7 @@
             this.btnModificarMarca.Location = new System.Drawing.Point(128, 394);
             this.btnModificarMarca.Name = "btnModificarMarca";
             this.btnModificarMarca.Size = new System.Drawing.Size(75, 23);
-            this.btnModificarMarca.TabIndex = 8;
+            this.btnModificarMarca.TabIndex = 2;
             this.btnModificarMarca.Text = "Modificar...";
             this.btnModificarMarca.UseVisualStyleBackColor = true;
             // 
@@ -74,7 +74,7 @@
             this.btnAgregarMarca.Location = new System.Drawing.Point(31, 394);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarMarca.TabIndex = 9;
+            this.btnAgregarMarca.TabIndex = 1;
             this.btnAgregarMarca.Text = "Agregar...";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
             this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
@@ -91,7 +91,7 @@
             this.lwMarcas.Name = "lwMarcas";
             this.lwMarcas.Size = new System.Drawing.Size(642, 295);
             this.lwMarcas.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.lwMarcas.TabIndex = 6;
+            this.lwMarcas.TabIndex = 0;
             this.lwMarcas.UseCompatibleStateImageBehavior = false;
             // 
             // lblListadoMarcas

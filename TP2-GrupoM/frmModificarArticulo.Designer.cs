@@ -53,14 +53,15 @@ namespace TP2_GrupoM
             this.txbCodigoArt.Location = new System.Drawing.Point(177, 137);
             this.txbCodigoArt.Name = "txbCodigoArt";
             this.txbCodigoArt.Size = new System.Drawing.Size(100, 20);
-            this.txbCodigoArt.TabIndex = 9;
+            this.txbCodigoArt.TabIndex = 0;
+            this.txbCodigoArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmModificarArticulo_KeyPress);
             // 
             // btnCancelarAgregar
             // 
             this.btnCancelarAgregar.Location = new System.Drawing.Point(225, 363);
             this.btnCancelarAgregar.Name = "btnCancelarAgregar";
             this.btnCancelarAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarAgregar.TabIndex = 25;
+            this.btnCancelarAgregar.TabIndex = 8;
             this.btnCancelarAgregar.Text = "Cancelar";
             this.btnCancelarAgregar.UseVisualStyleBackColor = true;
             this.btnCancelarAgregar.Click += new System.EventHandler(this.btnCancelarAgregar_Click);
@@ -70,10 +71,11 @@ namespace TP2_GrupoM
             this.btnAgregarArt.Location = new System.Drawing.Point(134, 363);
             this.btnAgregarArt.Name = "btnAgregarArt";
             this.btnAgregarArt.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarArt.TabIndex = 24;
+            this.btnAgregarArt.TabIndex = 7;
             this.btnAgregarArt.Text = "Aceptar";
             this.btnAgregarArt.UseVisualStyleBackColor = true;
             this.btnAgregarArt.Click += new System.EventHandler(this.btnAgregarArt_Click);
+            this.btnAgregarArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmModificarArticulo_KeyPress);
             // 
             // cboCatArt
             // 
@@ -81,7 +83,8 @@ namespace TP2_GrupoM
             this.cboCatArt.Location = new System.Drawing.Point(177, 255);
             this.cboCatArt.Name = "cboCatArt";
             this.cboCatArt.Size = new System.Drawing.Size(100, 21);
-            this.cboCatArt.TabIndex = 21;
+            this.cboCatArt.TabIndex = 4;
+            this.cboCatArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmModificarArticulo_KeyPress);
             // 
             // cboMarcaArt
             // 
@@ -89,35 +92,40 @@ namespace TP2_GrupoM
             this.cboMarcaArt.Location = new System.Drawing.Point(177, 226);
             this.cboMarcaArt.Name = "cboMarcaArt";
             this.cboMarcaArt.Size = new System.Drawing.Size(100, 21);
-            this.cboMarcaArt.TabIndex = 20;
+            this.cboMarcaArt.TabIndex = 3;
+            this.cboMarcaArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmModificarArticulo_KeyPress);
             // 
             // txbDescArt
             // 
             this.txbDescArt.Location = new System.Drawing.Point(177, 198);
             this.txbDescArt.Name = "txbDescArt";
             this.txbDescArt.Size = new System.Drawing.Size(100, 20);
-            this.txbDescArt.TabIndex = 19;
+            this.txbDescArt.TabIndex = 2;
+            this.txbDescArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmModificarArticulo_KeyPress);
             // 
             // txbNombreArt
             // 
             this.txbNombreArt.Location = new System.Drawing.Point(177, 167);
             this.txbNombreArt.Name = "txbNombreArt";
             this.txbNombreArt.Size = new System.Drawing.Size(100, 20);
-            this.txbNombreArt.TabIndex = 11;
+            this.txbNombreArt.TabIndex = 1;
+            this.txbNombreArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmModificarArticulo_KeyPress);
             // 
             // txbUrlImagen
             // 
             this.txbUrlImagen.Location = new System.Drawing.Point(177, 317);
             this.txbUrlImagen.Name = "txbUrlImagen";
             this.txbUrlImagen.Size = new System.Drawing.Size(100, 20);
-            this.txbUrlImagen.TabIndex = 23;
+            this.txbUrlImagen.TabIndex = 6;
+            this.txbUrlImagen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmModificarArticulo_KeyPress);
             // 
             // txbPrecio
             // 
             this.txbPrecio.Location = new System.Drawing.Point(177, 285);
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(100, 20);
-            this.txbPrecio.TabIndex = 22;
+            this.txbPrecio.TabIndex = 5;
+            this.txbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmModificarArticulo_KeyPress);
             // 
             // lblLinkImagen
             // 
@@ -217,6 +225,7 @@ namespace TP2_GrupoM
             this.Name = "frmModificarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmModificarArticulo";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmModificarArticulo_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
