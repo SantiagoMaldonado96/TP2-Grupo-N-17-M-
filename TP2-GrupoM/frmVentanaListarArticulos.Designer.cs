@@ -37,6 +37,7 @@ namespace TP2_GrupoM
             this.MarcaArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CategoriaArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PrecioArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.urlImagenArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sstCantidadArticulos = new System.Windows.Forms.StatusStrip();
             this.stlblCantidadArticulos = new System.Windows.Forms.ToolStripStatusLabel();
             this.stlblNumeroArticulos = new System.Windows.Forms.ToolStripStatusLabel();
@@ -44,7 +45,6 @@ namespace TP2_GrupoM
             this.btnModificarArt = new System.Windows.Forms.Button();
             this.btnEliminarArt = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.urlImagenArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sstCantidadArticulos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,8 +81,7 @@ namespace TP2_GrupoM
             this.lwArticulos.Location = new System.Drawing.Point(26, 81);
             this.lwArticulos.Name = "lwArticulos";
             this.lwArticulos.Size = new System.Drawing.Size(645, 288);
-            this.lwArticulos.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.lwArticulos.TabIndex = 1;
+            this.lwArticulos.TabIndex = 0;
             this.lwArticulos.UseCompatibleStateImageBehavior = false;
             this.lwArticulos.View = System.Windows.Forms.View.Details;
             this.lwArticulos.SelectedIndexChanged += new System.EventHandler(this.lwArticulos_SelectedIndexChanged);
@@ -117,6 +116,11 @@ namespace TP2_GrupoM
             this.PrecioArt.Text = "Precio";
             this.PrecioArt.Width = 55;
             // 
+            // urlImagenArt
+            // 
+            this.urlImagenArt.Text = "URL Imagen";
+            this.urlImagenArt.Width = 104;
+            // 
             // sstCantidadArticulos
             // 
             this.sstCantidadArticulos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -147,7 +151,7 @@ namespace TP2_GrupoM
             this.btnAgregarArt.Location = new System.Drawing.Point(24, 392);
             this.btnAgregarArt.Name = "btnAgregarArt";
             this.btnAgregarArt.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarArt.TabIndex = 3;
+            this.btnAgregarArt.TabIndex = 1;
             this.btnAgregarArt.Text = "Agregar...";
             this.btnAgregarArt.UseVisualStyleBackColor = true;
             this.btnAgregarArt.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -158,7 +162,7 @@ namespace TP2_GrupoM
             this.btnModificarArt.Location = new System.Drawing.Point(121, 392);
             this.btnModificarArt.Name = "btnModificarArt";
             this.btnModificarArt.Size = new System.Drawing.Size(75, 23);
-            this.btnModificarArt.TabIndex = 3;
+            this.btnModificarArt.TabIndex = 2;
             this.btnModificarArt.Text = "Modificar...";
             this.btnModificarArt.UseVisualStyleBackColor = true;
             this.btnModificarArt.Click += new System.EventHandler(this.btnModificarArt_Click);
@@ -184,11 +188,6 @@ namespace TP2_GrupoM
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // urlImagenArt
-            // 
-            this.urlImagenArt.Text = "URL Imagen";
-            this.urlImagenArt.Width = 104;
             // 
             // frmVentanaListarArticulos
             // 

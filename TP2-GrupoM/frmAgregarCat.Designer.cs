@@ -42,7 +42,7 @@
             this.btnCancelarCat.Location = new System.Drawing.Point(219, 173);
             this.btnCancelarCat.Name = "btnCancelarCat";
             this.btnCancelarCat.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarCat.TabIndex = 22;
+            this.btnCancelarCat.TabIndex = 3;
             this.btnCancelarCat.Text = "Cancelar";
             this.btnCancelarCat.UseVisualStyleBackColor = true;
             this.btnCancelarCat.Click += new System.EventHandler(this.btnCancelarCat_Click);
@@ -52,23 +52,26 @@
             this.btnAgregarCat.Location = new System.Drawing.Point(128, 173);
             this.btnAgregarCat.Name = "btnAgregarCat";
             this.btnAgregarCat.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarCat.TabIndex = 21;
+            this.btnAgregarCat.TabIndex = 2;
             this.btnAgregarCat.Text = "Agregar";
             this.btnAgregarCat.UseVisualStyleBackColor = true;
+            this.btnAgregarCat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarCat_KeyPress);
             // 
             // txbCodigoCat
             // 
             this.txbCodigoCat.Location = new System.Drawing.Point(162, 94);
             this.txbCodigoCat.Name = "txbCodigoCat";
             this.txbCodigoCat.Size = new System.Drawing.Size(100, 20);
-            this.txbCodigoCat.TabIndex = 20;
+            this.txbCodigoCat.TabIndex = 0;
+            this.txbCodigoCat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarCat_KeyPress);
             // 
             // txbNombreCat
             // 
             this.txbNombreCat.Location = new System.Drawing.Point(162, 124);
             this.txbNombreCat.Name = "txbNombreCat";
             this.txbNombreCat.Size = new System.Drawing.Size(100, 20);
-            this.txbNombreCat.TabIndex = 17;
+            this.txbNombreCat.TabIndex = 1;
+            this.txbNombreCat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarCat_KeyPress);
             // 
             // lblCodCat
             // 
@@ -113,6 +116,7 @@
             this.Name = "frmAgregarCat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAgregarCat";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarCat_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

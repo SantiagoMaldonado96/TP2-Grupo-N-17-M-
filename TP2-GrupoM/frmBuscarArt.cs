@@ -21,5 +21,15 @@ namespace TP2_GrupoM
         {
             this.Close();
         }
+
+        private void frmBuscarArt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Asigna al Enter para poder cambiar de foco (como el Tab)
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true; // Previene el sonido de 'beep'
+                this.SelectNextControl(this.ActiveControl, true, true, true, true);
+            }
+        }
     }
 }

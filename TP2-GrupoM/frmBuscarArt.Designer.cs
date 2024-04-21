@@ -70,23 +70,26 @@
             this.txbBuscarCod.Location = new System.Drawing.Point(217, 85);
             this.txbBuscarCod.Name = "txbBuscarCod";
             this.txbBuscarCod.Size = new System.Drawing.Size(100, 20);
-            this.txbBuscarCod.TabIndex = 2;
+            this.txbBuscarCod.TabIndex = 0;
+            this.txbBuscarCod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmBuscarArt_KeyPress);
             // 
             // txbBuscarNombre
             // 
             this.txbBuscarNombre.Location = new System.Drawing.Point(217, 119);
             this.txbBuscarNombre.Name = "txbBuscarNombre";
             this.txbBuscarNombre.Size = new System.Drawing.Size(100, 20);
-            this.txbBuscarNombre.TabIndex = 2;
+            this.txbBuscarNombre.TabIndex = 1;
+            this.txbBuscarNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmBuscarArt_KeyPress);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(139, 167);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmBuscarArt_KeyPress);
             // 
             // btnCancelarBuscar
             // 
@@ -113,6 +116,7 @@
             this.Name = "frmBuscarArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmBuscarArt";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmBuscarArt_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

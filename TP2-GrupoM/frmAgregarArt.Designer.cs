@@ -99,6 +99,7 @@
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(100, 20);
             this.txbPrecio.TabIndex = 5;
+            this.txbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             // 
             // txbNombreArt
             // 
@@ -106,6 +107,7 @@
             this.txbNombreArt.Name = "txbNombreArt";
             this.txbNombreArt.Size = new System.Drawing.Size(100, 20);
             this.txbNombreArt.TabIndex = 1;
+            this.txbNombreArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             // 
             // txbDescArt
             // 
@@ -113,6 +115,7 @@
             this.txbDescArt.Name = "txbDescArt";
             this.txbDescArt.Size = new System.Drawing.Size(100, 20);
             this.txbDescArt.TabIndex = 2;
+            this.txbDescArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             // 
             // lblPrecioArt
             // 
@@ -130,6 +133,7 @@
             this.cboMarcaArt.Name = "cboMarcaArt";
             this.cboMarcaArt.Size = new System.Drawing.Size(100, 21);
             this.cboMarcaArt.TabIndex = 3;
+            this.cboMarcaArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             // 
             // lblCatArt
             // 
@@ -147,6 +151,7 @@
             this.cboCatArt.Name = "cboCatArt";
             this.cboCatArt.Size = new System.Drawing.Size(100, 21);
             this.cboCatArt.TabIndex = 4;
+            this.cboCatArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             // 
             // btnAgregarArt
             // 
@@ -157,6 +162,7 @@
             this.btnAgregarArt.Text = "Aceptar";
             this.btnAgregarArt.UseVisualStyleBackColor = true;
             this.btnAgregarArt.Click += new System.EventHandler(this.btnAgregarArt_Click);
+            this.btnAgregarArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             // 
             // btnCancelarAgregar
             // 
@@ -183,6 +189,7 @@
             this.txbUrlImagen.Name = "txbUrlImagen";
             this.txbUrlImagen.Size = new System.Drawing.Size(100, 20);
             this.txbUrlImagen.TabIndex = 6;
+            this.txbUrlImagen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             // 
             // txbCodigoArt
             // 
@@ -190,6 +197,7 @@
             this.txbCodigoArt.Name = "txbCodigoArt";
             this.txbCodigoArt.Size = new System.Drawing.Size(100, 20);
             this.txbCodigoArt.TabIndex = 0;
+            this.txbCodigoArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             // 
             // frmAgregarArt
             // 
@@ -216,6 +224,7 @@
             this.Name = "frmAgregarArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "v";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

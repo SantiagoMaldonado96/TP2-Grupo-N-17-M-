@@ -51,7 +51,7 @@
             this.btnArticulos.Location = new System.Drawing.Point(215, 110);
             this.btnArticulos.Name = "btnArticulos";
             this.btnArticulos.Size = new System.Drawing.Size(139, 29);
-            this.btnArticulos.TabIndex = 1;
+            this.btnArticulos.TabIndex = 0;
             this.btnArticulos.Text = "Articulos";
             this.btnArticulos.UseVisualStyleBackColor = true;
             this.btnArticulos.Click += new System.EventHandler(this.btnArticulos_Click);
@@ -62,7 +62,7 @@
             this.btnMarcas.Location = new System.Drawing.Point(215, 154);
             this.btnMarcas.Name = "btnMarcas";
             this.btnMarcas.Size = new System.Drawing.Size(139, 29);
-            this.btnMarcas.TabIndex = 2;
+            this.btnMarcas.TabIndex = 1;
             this.btnMarcas.Text = "Marcas";
             this.btnMarcas.UseVisualStyleBackColor = true;
             this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
@@ -73,7 +73,7 @@
             this.btnCategorias.Location = new System.Drawing.Point(215, 198);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(139, 29);
-            this.btnCategorias.TabIndex = 3;
+            this.btnCategorias.TabIndex = 2;
             this.btnCategorias.Text = "Categorias";
             this.btnCategorias.UseVisualStyleBackColor = true;
             this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);

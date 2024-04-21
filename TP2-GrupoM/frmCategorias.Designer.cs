@@ -42,7 +42,7 @@
             this.btnSalir.Location = new System.Drawing.Point(583, 428);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 10;
+            this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -53,7 +53,7 @@
             this.btnEliminarCat.Location = new System.Drawing.Point(226, 428);
             this.btnEliminarCat.Name = "btnEliminarCat";
             this.btnEliminarCat.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarCat.TabIndex = 7;
+            this.btnEliminarCat.TabIndex = 3;
             this.btnEliminarCat.Text = "Eliminar...";
             this.btnEliminarCat.UseVisualStyleBackColor = true;
             this.btnEliminarCat.Click += new System.EventHandler(this.btnEliminarCat_Click);
@@ -64,7 +64,7 @@
             this.btnModificarCat.Location = new System.Drawing.Point(132, 428);
             this.btnModificarCat.Name = "btnModificarCat";
             this.btnModificarCat.Size = new System.Drawing.Size(75, 23);
-            this.btnModificarCat.TabIndex = 8;
+            this.btnModificarCat.TabIndex = 2;
             this.btnModificarCat.Text = "Modificar...";
             this.btnModificarCat.UseVisualStyleBackColor = true;
             // 
@@ -74,7 +74,7 @@
             this.btnAgregarCat.Location = new System.Drawing.Point(35, 428);
             this.btnAgregarCat.Name = "btnAgregarCat";
             this.btnAgregarCat.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarCat.TabIndex = 9;
+            this.btnAgregarCat.TabIndex = 1;
             this.btnAgregarCat.Text = "Agregar...";
             this.btnAgregarCat.UseVisualStyleBackColor = true;
             this.btnAgregarCat.Click += new System.EventHandler(this.btnAgregarCat_Click);
@@ -91,7 +91,7 @@
             this.lwCategorias.Name = "lwCategorias";
             this.lwCategorias.Size = new System.Drawing.Size(621, 323);
             this.lwCategorias.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.lwCategorias.TabIndex = 6;
+            this.lwCategorias.TabIndex = 0;
             this.lwCategorias.UseCompatibleStateImageBehavior = false;
             // 
             // lblListadoCategorias
