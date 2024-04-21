@@ -52,16 +52,14 @@
             this.txbCodigoMarca.Location = new System.Drawing.Point(147, 89);
             this.txbCodigoMarca.Name = "txbCodigoMarca";
             this.txbCodigoMarca.Size = new System.Drawing.Size(100, 20);
-            this.txbCodigoMarca.TabIndex = 0;
-            this.txbCodigoMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarMarca_KeyPress);
+            this.txbCodigoMarca.TabIndex = 13;
             // 
             // txbNombreMarca
             // 
             this.txbNombreMarca.Location = new System.Drawing.Point(147, 119);
             this.txbNombreMarca.Name = "txbNombreMarca";
             this.txbNombreMarca.Size = new System.Drawing.Size(100, 20);
-            this.txbNombreMarca.TabIndex = 1;
-            this.txbNombreMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarMarca_KeyPress);
+            this.txbNombreMarca.TabIndex = 10;
             // 
             // lblCodMarca
             // 
@@ -86,7 +84,7 @@
             this.btnCancelarMarca.Location = new System.Drawing.Point(204, 168);
             this.btnCancelarMarca.Name = "btnCancelarMarca";
             this.btnCancelarMarca.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarMarca.TabIndex = 3;
+            this.btnCancelarMarca.TabIndex = 15;
             this.btnCancelarMarca.Text = "Cancelar";
             this.btnCancelarMarca.UseVisualStyleBackColor = true;
             this.btnCancelarMarca.Click += new System.EventHandler(this.btnCancelarMarca_Click);
@@ -96,10 +94,9 @@
             this.btnAgregarMarca.Location = new System.Drawing.Point(113, 168);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarMarca.TabIndex = 2;
+            this.btnAgregarMarca.TabIndex = 14;
             this.btnAgregarMarca.Text = "Agregar";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
-            this.btnAgregarMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarMarca_KeyPress);
             // 
             // frmAgregarMarca
             // 
@@ -116,7 +113,6 @@
             this.Name = "frmAgregarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAgregarMarca";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarMarca_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

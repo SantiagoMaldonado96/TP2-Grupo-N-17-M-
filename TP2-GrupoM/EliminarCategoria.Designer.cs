@@ -40,7 +40,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(301, 156);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(83, 34);
-            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.TabIndex = 0;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
@@ -49,7 +49,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(164, 227);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(97, 30);
-            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -59,7 +59,7 @@
             this.textBox1.Location = new System.Drawing.Point(26, 164);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(253, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBox1.TabIndex = 2;
             // 
             // label1
             // 
