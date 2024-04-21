@@ -31,8 +31,8 @@ namespace TP2_GrupoM
         {
             this.lblTituloListadoArticulos = new System.Windows.Forms.Label();
             this.lwArticulos = new System.Windows.Forms.ListView();
-            this.NombreArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CodigoArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NombreArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DescripcionArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MarcaArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CategoriaArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -66,8 +66,8 @@ namespace TP2_GrupoM
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lwArticulos.BackColor = System.Drawing.SystemColors.Info;
             this.lwArticulos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.NombreArt,
             this.CodigoArt,
+            this.NombreArt,
             this.DescripcionArt,
             this.MarcaArt,
             this.CategoriaArt,
@@ -83,16 +83,17 @@ namespace TP2_GrupoM
             this.lwArticulos.TabIndex = 1;
             this.lwArticulos.UseCompatibleStateImageBehavior = false;
             this.lwArticulos.View = System.Windows.Forms.View.Details;
-            // 
-            // NombreArt
-            // 
-            this.NombreArt.Text = "Nombre";
-            this.NombreArt.Width = 117;
+            this.lwArticulos.SelectedIndexChanged += new System.EventHandler(this.lwArticulos_SelectedIndexChanged);
             // 
             // CodigoArt
             // 
             this.CodigoArt.Text = "Codigo";
-            this.CodigoArt.Width = 70;
+            this.CodigoArt.Width = 50;
+            // 
+            // NombreArt
+            // 
+            this.NombreArt.Text = "Nombre";
+            this.NombreArt.Width = 70;
             // 
             // DescripcionArt
             // 
@@ -199,7 +200,6 @@ namespace TP2_GrupoM
             this.Name = "frmVentanaListarArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Articulos";
-            this.Load += new System.EventHandler(this.frmVentanaListarArticulos_Load);
             this.sstCantidadArticulos.ResumeLayout(false);
             this.sstCantidadArticulos.PerformLayout();
             this.ResumeLayout(false);
@@ -210,7 +210,6 @@ namespace TP2_GrupoM
         #endregion
 
         private System.Windows.Forms.Label lblTituloListadoArticulos;
-        private System.Windows.Forms.ListView lwArticulos;
         private System.Windows.Forms.StatusStrip sstCantidadArticulos;
         private System.Windows.Forms.ToolStripStatusLabel stlblCantidadArticulos;
         private System.Windows.Forms.ToolStripStatusLabel stlblNumeroArticulos;
@@ -218,11 +217,12 @@ namespace TP2_GrupoM
         private System.Windows.Forms.Button btnModificarArt;
         private System.Windows.Forms.Button btnEliminarArt;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ColumnHeader NombreArt;
         private System.Windows.Forms.ColumnHeader CodigoArt;
+        private System.Windows.Forms.ColumnHeader NombreArt;
         private System.Windows.Forms.ColumnHeader DescripcionArt;
         private System.Windows.Forms.ColumnHeader MarcaArt;
         private System.Windows.Forms.ColumnHeader CategoriaArt;
         private System.Windows.Forms.ColumnHeader PrecioArt;
+        public System.Windows.Forms.ListView lwArticulos;
     }
 }

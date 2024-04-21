@@ -189,7 +189,7 @@
             this.txbCodigoArt.Location = new System.Drawing.Point(192, 128);
             this.txbCodigoArt.Name = "txbCodigoArt";
             this.txbCodigoArt.Size = new System.Drawing.Size(100, 20);
-            this.txbCodigoArt.TabIndex = 9;
+            this.txbCodigoArt.TabIndex = 0;
             // 
             // frmAgregarArt
             // 
@@ -235,10 +235,10 @@
         private System.Windows.Forms.ComboBox cboMarcaArt;
         private System.Windows.Forms.Label lblCatArt;
         private System.Windows.Forms.ComboBox cboCatArt;
-        private System.Windows.Forms.Button btnAgregarArt;
         private System.Windows.Forms.Button btnCancelarAgregar;
         private System.Windows.Forms.Label lblLinkImagen;
         private System.Windows.Forms.TextBox txbUrlImagen;
         private System.Windows.Forms.TextBox txbCodigoArt;
+        public System.Windows.Forms.Button btnAgregarArt;
     }
 }

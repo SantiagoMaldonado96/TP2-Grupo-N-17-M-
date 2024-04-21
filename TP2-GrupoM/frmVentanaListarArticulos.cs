@@ -9,24 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TP2_GrupoM
-{
+{    
     public partial class frmVentanaListarArticulos : Form
     {
-
         public frmVentanaListarArticulos()
         {
             InitializeComponent();
+            
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAgregarArt ventana = new frmAgregarArt();
+            frmAgregarArt ventana = new frmAgregarArt(this);
             ventana.ShowDialog();
-        }
-
-        private void frmVentanaListarArticulos_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnModificarArt_Click(object sender, EventArgs e)
@@ -42,6 +37,12 @@ namespace TP2_GrupoM
         {
             EliminarArticulo ventana = new EliminarArticulo();
             ventana.ShowDialog();
+        }
+
+        private void lwArticulos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }

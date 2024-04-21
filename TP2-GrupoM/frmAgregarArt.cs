@@ -12,41 +12,38 @@ namespace TP2_GrupoM
 {
     public partial class frmAgregarArt : Form
     {
-        //Lista de articulos. Falta hacerla Global
-        List<Articulo> listaArticulos = new List<Articulo>();
+        /*//Lista de articulos
+        List<Articulo> listaArticulos = new List<Articulo>();*/
 
-        public frmAgregarArt()
+        frmVentanaListarArticulos frmArticulos = new frmVentanaListarArticulos();
+
+        public frmAgregarArt(frmVentanaListarArticulos frmArticulos)
         {
             InitializeComponent();
+            //referencia del formulario listarArticulos
+            this.frmArticulos = frmArticulos;
         }
 
         private void btnAgregarArt_Click(object sender, EventArgs e)
         {
-            Articulo articulo = new Articulo();
-            articulo.Nombre = txbNombreArt.Text;
-            articulo.CodigoArticulo = int.Parse(txbCodigoArt.Text);
-            articulo.Descripcion = txbDescArt.Text;
-            articulo.Marca = cboMarcaArt.Text;
-            articulo.Categoria = cboCatArt.Text;
-            articulo.Precio = (float)int.Parse(txbPrecio.Text);
+            ///Cargar datos en lwArticulos
 
-            MessageBox.Show("nombre:" + articulo.Nombre + "\ncodigo:" + articulo.CodigoArticulo + "\ndescripcion:" + articulo.Descripcion + "\nprecio:" + articulo.Precio);
+            //creo un objeto ListViewItem en donde voy a guardar los subitens
+            ListViewItem item = new ListViewItem();
 
+            item.Text= txbCodigoArt.Text;
 
-            /*// Agregar articulos cargados a la lista de articulos.
-            foreach (Articulo articulo in listaArticulos)
-            {
-                articulo.Nombre = txbNombreArt.Text;
-                articulo.CodigoArticulo = int.Parse(txbCodigoArt.Text);
-                articulo.Descripcion = txbDescArt.Text;
-                articulo.Marca = cboMarcaArt.Text;
-                articulo.Categoria = cboCatArt.Text;
-                articulo.Precio = (float)int.Parse(txbPrecio.Text);
+            //cargo los subitems dentro del objeto "item"
+            item.SubItems.Add(txbNombreArt.Text);
+            item.SubItems.Add(txbDescArt.Text);
+            item.SubItems.Add(cboMarcaArt.Text);
+            item.SubItems.Add(cboCatArt.Text);
+            item.SubItems.Add(txbPrecio.Text);
 
-                MessageBox.Show("nombre:" + articulo.Nombre + "\ncodigo:" + articulo.CodigoArticulo + "\ndescripcion:" + articulo.Descripcion + "\nprecio:" + articulo.Precio);
-            }*/
-            
-            //Borrar campos del textBox una vez cargado los datos
+            //agrego el objeto "item" dentro del listView
+            frmArticulos.lwArticulos.Items.Add(item);
+
+            //limpiar campos del textBox una vez cargado los datos
             txbNombreArt.Text = "";
             txbCodigoArt.Text = "";
             txbDescArt.Text = "";
@@ -54,6 +51,8 @@ namespace TP2_GrupoM
             cboCatArt.Text = "";
             txbPrecio.Text = "";
             txbUrlImagen.Text = "";
+
+            this.Close();
 
         }
 
