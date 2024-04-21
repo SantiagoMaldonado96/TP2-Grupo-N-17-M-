@@ -44,6 +44,7 @@ namespace TP2_GrupoM
             this.btnModificarArt = new System.Windows.Forms.Button();
             this.btnEliminarArt = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.urlImagenArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sstCantidadArticulos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,14 +72,15 @@ namespace TP2_GrupoM
             this.DescripcionArt,
             this.MarcaArt,
             this.CategoriaArt,
-            this.PrecioArt});
+            this.PrecioArt,
+            this.urlImagenArt});
             this.lwArticulos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lwArticulos.FullRowSelect = true;
             this.lwArticulos.GridLines = true;
             this.lwArticulos.HideSelection = false;
             this.lwArticulos.Location = new System.Drawing.Point(26, 81);
             this.lwArticulos.Name = "lwArticulos";
-            this.lwArticulos.Size = new System.Drawing.Size(642, 288);
+            this.lwArticulos.Size = new System.Drawing.Size(645, 288);
             this.lwArticulos.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lwArticulos.TabIndex = 1;
             this.lwArticulos.UseCompatibleStateImageBehavior = false;
@@ -108,12 +110,12 @@ namespace TP2_GrupoM
             // CategoriaArt
             // 
             this.CategoriaArt.Text = "Categoria";
-            this.CategoriaArt.Width = 201;
+            this.CategoriaArt.Width = 180;
             // 
             // PrecioArt
             // 
             this.PrecioArt.Text = "Precio";
-            this.PrecioArt.Width = 56;
+            this.PrecioArt.Width = 55;
             // 
             // sstCantidadArticulos
             // 
@@ -183,6 +185,11 @@ namespace TP2_GrupoM
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // urlImagenArt
+            // 
+            this.urlImagenArt.Text = "URL Imagen";
+            this.urlImagenArt.Width = 104;
+            // 
             // frmVentanaListarArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,5 +231,6 @@ namespace TP2_GrupoM
         private System.Windows.Forms.ColumnHeader CategoriaArt;
         private System.Windows.Forms.ColumnHeader PrecioArt;
         public System.Windows.Forms.ListView lwArticulos;
+        private System.Windows.Forms.ColumnHeader urlImagenArt;
     }
 }

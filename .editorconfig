@@ -1,0 +1,7 @@
+﻿[*.{cs,vb}]
+
+# IDE0017: Simplificar la inicialización de objetos
+dotnet_diagnostic.IDE0017.severity = silent
+
+# IDE1006: Estilos de nombres
+dotnet_diagnostic.IDE1006.severity = silent

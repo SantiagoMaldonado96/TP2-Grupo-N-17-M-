@@ -39,6 +39,7 @@ namespace TP2_GrupoM
             item.SubItems.Add(cboMarcaArt.Text);
             item.SubItems.Add(cboCatArt.Text);
             item.SubItems.Add(txbPrecio.Text);
+            item.SubItems.Add(txbUrlImagen.Text);
 
             //agrego el objeto "item" dentro del listView
             frmArticulos.lwArticulos.Items.Add(item);
