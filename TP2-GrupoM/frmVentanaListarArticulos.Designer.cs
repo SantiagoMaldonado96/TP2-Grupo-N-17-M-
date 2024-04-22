@@ -30,14 +30,6 @@ namespace TP2_GrupoM
         private void InitializeComponent()
         {
             this.lblTituloListadoArticulos = new System.Windows.Forms.Label();
-            this.lwArticulos = new System.Windows.Forms.ListView();
-            this.CodigoArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NombreArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DescripcionArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MarcaArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CategoriaArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.PrecioArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.urlImagenArt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sstCantidadArticulos = new System.Windows.Forms.StatusStrip();
             this.stlblCantidadArticulos = new System.Windows.Forms.ToolStripStatusLabel();
             this.stlblNumeroArticulos = new System.Windows.Forms.ToolStripStatusLabel();
@@ -45,7 +37,11 @@ namespace TP2_GrupoM
             this.btnModificarArt = new System.Windows.Forms.Button();
             this.btnEliminarArt = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.dvgArticulos = new System.Windows.Forms.DataGridView();
+            this.pbxArticulo = new System.Windows.Forms.PictureBox();
             this.sstCantidadArticulos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTituloListadoArticulos
@@ -60,75 +56,14 @@ namespace TP2_GrupoM
             this.lblTituloListadoArticulos.Text = "Articulos Disponibles";
             this.lblTituloListadoArticulos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lwArticulos
-            // 
-            this.lwArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lwArticulos.BackColor = System.Drawing.SystemColors.Info;
-            this.lwArticulos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.CodigoArt,
-            this.NombreArt,
-            this.DescripcionArt,
-            this.MarcaArt,
-            this.CategoriaArt,
-            this.PrecioArt,
-            this.urlImagenArt});
-            this.lwArticulos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lwArticulos.FullRowSelect = true;
-            this.lwArticulos.GridLines = true;
-            this.lwArticulos.HideSelection = false;
-            this.lwArticulos.Location = new System.Drawing.Point(26, 81);
-            this.lwArticulos.Name = "lwArticulos";
-            this.lwArticulos.Size = new System.Drawing.Size(645, 288);
-            this.lwArticulos.TabIndex = 0;
-            this.lwArticulos.UseCompatibleStateImageBehavior = false;
-            this.lwArticulos.View = System.Windows.Forms.View.Details;
-            this.lwArticulos.SelectedIndexChanged += new System.EventHandler(this.lwArticulos_SelectedIndexChanged);
-            // 
-            // CodigoArt
-            // 
-            this.CodigoArt.Text = "Codigo";
-            this.CodigoArt.Width = 50;
-            // 
-            // NombreArt
-            // 
-            this.NombreArt.Text = "Nombre";
-            this.NombreArt.Width = 70;
-            // 
-            // DescripcionArt
-            // 
-            this.DescripcionArt.Text = "Descripcion";
-            this.DescripcionArt.Width = 106;
-            // 
-            // MarcaArt
-            // 
-            this.MarcaArt.Text = "Marca";
-            this.MarcaArt.Width = 87;
-            // 
-            // CategoriaArt
-            // 
-            this.CategoriaArt.Text = "Categoria";
-            this.CategoriaArt.Width = 180;
-            // 
-            // PrecioArt
-            // 
-            this.PrecioArt.Text = "Precio";
-            this.PrecioArt.Width = 55;
-            // 
-            // urlImagenArt
-            // 
-            this.urlImagenArt.Text = "URL Imagen";
-            this.urlImagenArt.Width = 104;
-            // 
             // sstCantidadArticulos
             // 
             this.sstCantidadArticulos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stlblCantidadArticulos,
             this.stlblNumeroArticulos});
-            this.sstCantidadArticulos.Location = new System.Drawing.Point(0, 436);
+            this.sstCantidadArticulos.Location = new System.Drawing.Point(0, 473);
             this.sstCantidadArticulos.Name = "sstCantidadArticulos";
-            this.sstCantidadArticulos.Size = new System.Drawing.Size(708, 22);
+            this.sstCantidadArticulos.Size = new System.Drawing.Size(978, 22);
             this.sstCantidadArticulos.TabIndex = 2;
             this.sstCantidadArticulos.Text = "statusStrip1";
             // 
@@ -148,7 +83,7 @@ namespace TP2_GrupoM
             // btnAgregarArt
             // 
             this.btnAgregarArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregarArt.Location = new System.Drawing.Point(24, 392);
+            this.btnAgregarArt.Location = new System.Drawing.Point(24, 429);
             this.btnAgregarArt.Name = "btnAgregarArt";
             this.btnAgregarArt.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarArt.TabIndex = 1;
@@ -159,7 +94,7 @@ namespace TP2_GrupoM
             // btnModificarArt
             // 
             this.btnModificarArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnModificarArt.Location = new System.Drawing.Point(121, 392);
+            this.btnModificarArt.Location = new System.Drawing.Point(121, 429);
             this.btnModificarArt.Name = "btnModificarArt";
             this.btnModificarArt.Size = new System.Drawing.Size(75, 23);
             this.btnModificarArt.TabIndex = 2;
@@ -170,7 +105,7 @@ namespace TP2_GrupoM
             // btnEliminarArt
             // 
             this.btnEliminarArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminarArt.Location = new System.Drawing.Point(215, 392);
+            this.btnEliminarArt.Location = new System.Drawing.Point(215, 429);
             this.btnEliminarArt.Name = "btnEliminarArt";
             this.btnEliminarArt.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarArt.TabIndex = 3;
@@ -181,7 +116,7 @@ namespace TP2_GrupoM
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(596, 392);
+            this.btnSalir.Location = new System.Drawing.Point(866, 429);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
@@ -189,17 +124,43 @@ namespace TP2_GrupoM
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // dvgArticulos
+            // 
+            this.dvgArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dvgArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dvgArticulos.Location = new System.Drawing.Point(26, 81);
+            this.dvgArticulos.Name = "dvgArticulos";
+            this.dvgArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dvgArticulos.Size = new System.Drawing.Size(658, 326);
+            this.dvgArticulos.TabIndex = 5;
+            this.dvgArticulos.SelectionChanged += new System.EventHandler(this.dvgArticulos_SelectionChanged_1);
+            // 
+            // pbxArticulo
+            // 
+            this.pbxArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxArticulo.Location = new System.Drawing.Point(690, 81);
+            this.pbxArticulo.Name = "pbxArticulo";
+            this.pbxArticulo.Size = new System.Drawing.Size(251, 326);
+            this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxArticulo.TabIndex = 6;
+            this.pbxArticulo.TabStop = false;
+            // 
             // frmVentanaListarArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 458);
+            this.ClientSize = new System.Drawing.Size(978, 495);
+            this.Controls.Add(this.pbxArticulo);
+            this.Controls.Add(this.dvgArticulos);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminarArt);
             this.Controls.Add(this.btnModificarArt);
             this.Controls.Add(this.btnAgregarArt);
             this.Controls.Add(this.sstCantidadArticulos);
-            this.Controls.Add(this.lwArticulos);
             this.Controls.Add(this.lblTituloListadoArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -209,6 +170,8 @@ namespace TP2_GrupoM
             this.Load += new System.EventHandler(this.frmVentanaListarArticulos_Load);
             this.sstCantidadArticulos.ResumeLayout(false);
             this.sstCantidadArticulos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,13 +187,7 @@ namespace TP2_GrupoM
         private System.Windows.Forms.Button btnModificarArt;
         private System.Windows.Forms.Button btnEliminarArt;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ColumnHeader CodigoArt;
-        private System.Windows.Forms.ColumnHeader NombreArt;
-        private System.Windows.Forms.ColumnHeader DescripcionArt;
-        private System.Windows.Forms.ColumnHeader MarcaArt;
-        private System.Windows.Forms.ColumnHeader CategoriaArt;
-        private System.Windows.Forms.ColumnHeader PrecioArt;
-        public System.Windows.Forms.ListView lwArticulos;
-        private System.Windows.Forms.ColumnHeader urlImagenArt;
+        private System.Windows.Forms.DataGridView dvgArticulos;
+        private System.Windows.Forms.PictureBox pbxArticulo;
     }
 }

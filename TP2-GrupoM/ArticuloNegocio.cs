@@ -20,7 +20,7 @@ namespace TP2_GrupoM
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select Nombre, Descripcion from ARTICULOS";
+                comando.CommandText = "select Codigo, Nombre, A.Descripcion, M.Descripcion Marca, C.Descripcion Categoria, Precio, ImagenUrl from ARTICULOS A, MARCAS M, CATEGORIAS C, IMAGENES I where A.IdMarca = M.Id and A.IdCategoria = C.Id and A.Id = I.IdArticulo";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -29,9 +29,16 @@ namespace TP2_GrupoM
                 while (lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    //aux.CodigoArticulo = (string)lector["Codigo"];
+                    Marca marca = new Marca();  
+                    aux.CodigoArticulo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
+                    aux.Marca = new Marca();
+                    aux.Marca.NombreMarca = (string)lector["Marca"];
+                    aux.Cat = new Categoria();  
+                    aux.Cat.NombreCategoria = (string)lector["Categoria"];
+                    aux.Precio = (float)lector.GetDecimal(5);
+                    aux.Imagen = (string)lector["ImagenUrl"];
 
                     lista.Add(aux);
                 }

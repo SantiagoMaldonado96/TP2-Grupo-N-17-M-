@@ -42,7 +42,7 @@ namespace TP2_GrupoM
             item.SubItems.Add(txbUrlImagen.Text);
 
             //agrego el objeto "item" dentro del listView
-            frmArticulos.lwArticulos.Items.Add(item);
+
 
             //limpiar campos del textBox una vez cargado los datos
             txbNombreArt.Text = "";
