@@ -206,6 +206,7 @@ namespace TP2_GrupoM
             this.Name = "frmVentanaListarArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Articulos";
+            this.Load += new System.EventHandler(this.frmVentanaListarArticulos_Load);
             this.sstCantidadArticulos.ResumeLayout(false);
             this.sstCantidadArticulos.PerformLayout();
             this.ResumeLayout(false);

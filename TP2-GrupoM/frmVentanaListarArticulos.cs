@@ -60,5 +60,11 @@ namespace TP2_GrupoM
             
 
         }
+
+        private void frmVentanaListarArticulos_Load(object sender, EventArgs e)
+        {
+           // ArticuloNegocio negocio = new ArticuloNegocio();
+           // lwArticulos
+        }
     }
 }

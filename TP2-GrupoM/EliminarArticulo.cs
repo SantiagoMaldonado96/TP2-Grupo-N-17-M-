@@ -21,5 +21,11 @@ namespace TP2_GrupoM
         {
             this.Close();
         }
+
+        private void EliminarArticulo_Load(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            dgvArticulos.DataSource = negocio.listar();
+        }
     }
 }
