@@ -123,6 +123,7 @@
       <DependentUpon>frmVentanaListarArticulos.cs</DependentUpon>
     </Compile>
     <Compile Include="Marca.cs" />
+    <Compile Include="MarcaNegocio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EliminarArticulo.resx">
