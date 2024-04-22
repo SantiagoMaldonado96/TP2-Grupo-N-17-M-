@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TP2_GrupoM
+namespace Dominio
 {
-    internal class Articulo
+    public class Articulo
     {
         //Los datos mínimos con los que deberá contar el artículo son los siguientes:
 
