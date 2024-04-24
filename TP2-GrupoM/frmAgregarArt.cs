@@ -28,32 +28,25 @@ namespace TP2_GrupoM
 
         private void btnAgregarArt_Click(object sender, EventArgs e)
         {
-            ///Cargar datos en lwArticulos
+            Articulo articulo = new Articulo();
+            ArticuloNegocio negocio = new ArticuloNegocio();
 
-            //creo un objeto ListViewItem en donde voy a guardar los subitens
-            ListViewItem item = new ListViewItem();
+            try
+            {
+                articulo.CodigoArticulo = txbCodigoArt.Text;
+                articulo.Nombre = txbNombreArt.Text;
+                articulo.Descripcion = txbDescArt.Text;
+                articulo.Marca = (Marca)cboMarcaArt.SelectedItem;
+                articulo.Cat = (Categoria)cboCatArt.SelectedItem;
+                articulo.Precio = float.Parse(txbPrecio.Text);
 
-            item.Text= txbCodigoArt.Text;
+                negocio.agregar(articulo);
+            }
+            catch (Exception)
+            {
 
-            //cargo los subitems dentro del objeto "item"
-            item.SubItems.Add(txbNombreArt.Text);
-            item.SubItems.Add(txbDescArt.Text);
-            item.SubItems.Add(cboMarcaArt.Text);
-            item.SubItems.Add(cboCatArt.Text);
-            item.SubItems.Add(txbPrecio.Text);
-            item.SubItems.Add(txbUrlImagen.Text);
-
-            //agrego el objeto "item" dentro del listView
-
-
-            //limpiar campos del textBox una vez cargado los datos
-            txbNombreArt.Text = "";
-            txbCodigoArt.Text = "";
-            txbDescArt.Text = "";
-            cboMarcaArt.Text = "";
-            cboCatArt.Text = "";
-            txbPrecio.Text = "";
-            txbUrlImagen.Text = "";
+                throw;
+            }
 
             this.Close();
 
@@ -74,5 +67,23 @@ namespace TP2_GrupoM
                 this.SelectNextControl(this.ActiveControl, true, true, true, true);
             }
         }
+
+        private void frmAgregarArt_Load(object sender, EventArgs e)
+        {
+            MarcaNegocio marcanegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            try
+            {
+                cboMarcaArt.DataSource = marcanegocio.listar();
+                cboCatArt.DataSource = categoriaNegocio.listar();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
     }
 }

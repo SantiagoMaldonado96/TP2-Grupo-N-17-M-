@@ -128,6 +128,7 @@
             // 
             // cboMarcaArt
             // 
+            this.cboMarcaArt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarcaArt.FormattingEnabled = true;
             this.cboMarcaArt.Location = new System.Drawing.Point(192, 217);
             this.cboMarcaArt.Name = "cboMarcaArt";
@@ -146,6 +147,7 @@
             // 
             // cboCatArt
             // 
+            this.cboCatArt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCatArt.FormattingEnabled = true;
             this.cboCatArt.Location = new System.Drawing.Point(192, 246);
             this.cboCatArt.Name = "cboCatArt";
@@ -224,6 +226,7 @@
             this.Name = "frmAgregarArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "v";
+            this.Load += new System.EventHandler(this.frmAgregarArt_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
