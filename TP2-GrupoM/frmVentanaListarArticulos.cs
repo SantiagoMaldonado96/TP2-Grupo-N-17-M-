@@ -64,7 +64,7 @@ namespace TP2_GrupoM
             lista = negocio.listar();
             dvgArticulos.DataSource = lista;
             dvgArticulos.Columns["Imagen"].Visible = false;
-            cargarImagen(lista[0].Imagen);
+            cargarImagen(lista[0].Imagen.UrlImagen);
             
         }
 
@@ -84,7 +84,7 @@ namespace TP2_GrupoM
         private void dvgArticulos_SelectionChanged_1(object sender, EventArgs e)
         {
             Articulo seleccion = (Articulo)dvgArticulos.CurrentRow.DataBoundItem;
-            cargarImagen(seleccion.Imagen);
+            cargarImagen(seleccion.Imagen.UrlImagen);
         }
     }
 }

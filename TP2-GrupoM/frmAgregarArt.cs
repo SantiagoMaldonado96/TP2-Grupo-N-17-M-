@@ -41,6 +41,11 @@ namespace TP2_GrupoM
                 articulo.Precio = float.Parse(txbPrecio.Text);
 
                 negocio.agregar(articulo);
+                //leer solo el registro que se subio y traer Id 
+                int idbuscar = negocio.buscarId(articulo);
+                //cargar ahora a tabla imegenes con id y url
+                MessageBox.Show(idbuscar.ToString());
+
             }
             catch (Exception)
             {

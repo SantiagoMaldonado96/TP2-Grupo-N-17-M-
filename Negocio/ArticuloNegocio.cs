@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Dominio;
+using System.Net;
 
 namespace Negocio
 {
@@ -23,7 +24,8 @@ namespace Negocio
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    Marca marca = new Marca();  
+                    //Marca marca = new Marca(); 
+                    //Imagen imagen = new Imagen();
                     aux.CodigoArticulo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
@@ -32,7 +34,8 @@ namespace Negocio
                     aux.Cat = new Categoria();  
                     aux.Cat.NombreCategoria = (string)datos.Lector["Categoria"];
                     aux.Precio = (float)datos.Lector.GetDecimal(5);
-                    aux.Imagen = (string)datos.Lector["ImagenUrl"];
+                    aux.Imagen = new Imagen();
+                    aux.Imagen.UrlImagen = (string)datos.Lector["ImagenUrl"];
 
                     lista.Add(aux);
                 }
@@ -76,6 +79,23 @@ namespace Negocio
                 datos.cerrarConexion();
             }
 
+        }
+
+        public int buscarId(Articulo art)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            int Id;
+            string codigo = art.CodigoArticulo.ToString();
+            datos.setearConsulta("select id from ARTICULOS where Codigo = '"+codigo+"'");
+            
+            datos.ejecutarLectura();
+
+            datos.Lector.Read();
+            Id = (int)datos.Lector["id"];
+                
+            
+
+            return Id;
         }
     }
 }
