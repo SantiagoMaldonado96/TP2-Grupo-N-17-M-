@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.lblAgregarMarca = new System.Windows.Forms.Label();
-            this.txbCodigoMarca = new System.Windows.Forms.TextBox();
             this.txbNombreMarca = new System.Windows.Forms.TextBox();
-            this.lblCodMarca = new System.Windows.Forms.Label();
             this.lblNombreMarca = new System.Windows.Forms.Label();
             this.btnCancelarMarca = new System.Windows.Forms.Button();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
@@ -47,35 +45,18 @@
             this.lblAgregarMarca.TabIndex = 1;
             this.lblAgregarMarca.Text = "Agregar Marca";
             // 
-            // txbCodigoMarca
-            // 
-            this.txbCodigoMarca.Location = new System.Drawing.Point(147, 89);
-            this.txbCodigoMarca.Name = "txbCodigoMarca";
-            this.txbCodigoMarca.Size = new System.Drawing.Size(100, 20);
-            this.txbCodigoMarca.TabIndex = 0;
-            this.txbCodigoMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarMarca_KeyPress);
-            // 
             // txbNombreMarca
             // 
-            this.txbNombreMarca.Location = new System.Drawing.Point(147, 119);
+            this.txbNombreMarca.Location = new System.Drawing.Point(147, 92);
             this.txbNombreMarca.Name = "txbNombreMarca";
             this.txbNombreMarca.Size = new System.Drawing.Size(100, 20);
             this.txbNombreMarca.TabIndex = 1;
             this.txbNombreMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarMarca_KeyPress);
             // 
-            // lblCodMarca
-            // 
-            this.lblCodMarca.AutoSize = true;
-            this.lblCodMarca.Location = new System.Drawing.Point(97, 92);
-            this.lblCodMarca.Name = "lblCodMarca";
-            this.lblCodMarca.Size = new System.Drawing.Size(43, 13);
-            this.lblCodMarca.TabIndex = 11;
-            this.lblCodMarca.Text = "Codigo:";
-            // 
             // lblNombreMarca
             // 
             this.lblNombreMarca.AutoSize = true;
-            this.lblNombreMarca.Location = new System.Drawing.Point(93, 122);
+            this.lblNombreMarca.Location = new System.Drawing.Point(93, 95);
             this.lblNombreMarca.Name = "lblNombreMarca";
             this.lblNombreMarca.Size = new System.Drawing.Size(47, 13);
             this.lblNombreMarca.TabIndex = 12;
@@ -83,7 +64,7 @@
             // 
             // btnCancelarMarca
             // 
-            this.btnCancelarMarca.Location = new System.Drawing.Point(204, 168);
+            this.btnCancelarMarca.Location = new System.Drawing.Point(204, 141);
             this.btnCancelarMarca.Name = "btnCancelarMarca";
             this.btnCancelarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarMarca.TabIndex = 3;
@@ -93,7 +74,7 @@
             // 
             // btnAgregarMarca
             // 
-            this.btnAgregarMarca.Location = new System.Drawing.Point(113, 168);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(113, 141);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarMarca.TabIndex = 2;
@@ -106,12 +87,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 223);
+            this.ClientSize = new System.Drawing.Size(376, 200);
             this.Controls.Add(this.btnCancelarMarca);
             this.Controls.Add(this.btnAgregarMarca);
-            this.Controls.Add(this.txbCodigoMarca);
             this.Controls.Add(this.txbNombreMarca);
-            this.Controls.Add(this.lblCodMarca);
             this.Controls.Add(this.lblNombreMarca);
             this.Controls.Add(this.lblAgregarMarca);
             this.Name = "frmAgregarMarca";
@@ -126,9 +105,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblAgregarMarca;
-        private System.Windows.Forms.TextBox txbCodigoMarca;
         private System.Windows.Forms.TextBox txbNombreMarca;
-        private System.Windows.Forms.Label lblCodMarca;
         private System.Windows.Forms.Label lblNombreMarca;
         private System.Windows.Forms.Button btnCancelarMarca;
         private System.Windows.Forms.Button btnAgregarMarca;

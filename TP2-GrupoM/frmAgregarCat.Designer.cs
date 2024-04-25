@@ -30,9 +30,7 @@
         {
             this.btnCancelarCat = new System.Windows.Forms.Button();
             this.btnAgregarCat = new System.Windows.Forms.Button();
-            this.txbCodigoCat = new System.Windows.Forms.TextBox();
             this.txbNombreCat = new System.Windows.Forms.TextBox();
-            this.lblCodCat = new System.Windows.Forms.Label();
             this.lblNombreCat = new System.Windows.Forms.Label();
             this.lblAgregarMarca = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -55,37 +53,21 @@
             this.btnAgregarCat.TabIndex = 2;
             this.btnAgregarCat.Text = "Agregar";
             this.btnAgregarCat.UseVisualStyleBackColor = true;
+            this.btnAgregarCat.Click += new System.EventHandler(this.btnAgregarCat_Click);
             this.btnAgregarCat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarCat_KeyPress);
-            // 
-            // txbCodigoCat
-            // 
-            this.txbCodigoCat.Location = new System.Drawing.Point(162, 94);
-            this.txbCodigoCat.Name = "txbCodigoCat";
-            this.txbCodigoCat.Size = new System.Drawing.Size(100, 20);
-            this.txbCodigoCat.TabIndex = 0;
-            this.txbCodigoCat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarCat_KeyPress);
             // 
             // txbNombreCat
             // 
-            this.txbNombreCat.Location = new System.Drawing.Point(162, 124);
+            this.txbNombreCat.Location = new System.Drawing.Point(168, 106);
             this.txbNombreCat.Name = "txbNombreCat";
             this.txbNombreCat.Size = new System.Drawing.Size(100, 20);
             this.txbNombreCat.TabIndex = 1;
             this.txbNombreCat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarCat_KeyPress);
             // 
-            // lblCodCat
-            // 
-            this.lblCodCat.AutoSize = true;
-            this.lblCodCat.Location = new System.Drawing.Point(112, 97);
-            this.lblCodCat.Name = "lblCodCat";
-            this.lblCodCat.Size = new System.Drawing.Size(43, 13);
-            this.lblCodCat.TabIndex = 18;
-            this.lblCodCat.Text = "Codigo:";
-            // 
             // lblNombreCat
             // 
             this.lblNombreCat.AutoSize = true;
-            this.lblNombreCat.Location = new System.Drawing.Point(108, 127);
+            this.lblNombreCat.Location = new System.Drawing.Point(114, 109);
             this.lblNombreCat.Name = "lblNombreCat";
             this.lblNombreCat.Size = new System.Drawing.Size(47, 13);
             this.lblNombreCat.TabIndex = 19;
@@ -108,9 +90,7 @@
             this.ClientSize = new System.Drawing.Size(408, 223);
             this.Controls.Add(this.btnCancelarCat);
             this.Controls.Add(this.btnAgregarCat);
-            this.Controls.Add(this.txbCodigoCat);
             this.Controls.Add(this.txbNombreCat);
-            this.Controls.Add(this.lblCodCat);
             this.Controls.Add(this.lblNombreCat);
             this.Controls.Add(this.lblAgregarMarca);
             this.Name = "frmAgregarCat";
@@ -126,9 +106,7 @@
 
         private System.Windows.Forms.Button btnCancelarCat;
         private System.Windows.Forms.Button btnAgregarCat;
-        private System.Windows.Forms.TextBox txbCodigoCat;
         private System.Windows.Forms.TextBox txbNombreCat;
-        private System.Windows.Forms.Label lblCodCat;
         private System.Windows.Forms.Label lblNombreCat;
         private System.Windows.Forms.Label lblAgregarMarca;
     }

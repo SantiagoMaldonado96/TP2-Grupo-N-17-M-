@@ -39,6 +39,7 @@ namespace TP2_GrupoM
         {
             frmAgregarMarca ventana = new frmAgregarMarca();   
             ventana.ShowDialog();
+            cargarDgvmarcas();
         }
 
         private void btnEliminarMarca_Click(object sender, EventArgs e)

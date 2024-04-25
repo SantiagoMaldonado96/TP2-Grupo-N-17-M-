@@ -33,5 +33,26 @@ namespace TP2_GrupoM
                 this.SelectNextControl(this.ActiveControl, true, true, true, true);
             }
         }
+
+        private void btnAgregarCat_Click(object sender, EventArgs e)
+        {
+            Categoria categoria = new Categoria();
+            CategoriaNegocio negocio = new CategoriaNegocio();
+
+            try
+            {
+                categoria.NombreCategoria = txbNombreCat.Text;
+
+                negocio.agregar(categoria);
+
+                MessageBox.Show(" Categoria \n agregada \n con exito");
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            this.Close();
+        }
     }
 }

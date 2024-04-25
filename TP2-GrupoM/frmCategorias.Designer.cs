@@ -32,14 +32,15 @@
             this.btnEliminarCat = new System.Windows.Forms.Button();
             this.btnModificarCat = new System.Windows.Forms.Button();
             this.btnAgregarCat = new System.Windows.Forms.Button();
-            this.lwCategorias = new System.Windows.Forms.ListView();
             this.lblListadoCategorias = new System.Windows.Forms.Label();
+            this.dgvCategorias = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(583, 428);
+            this.btnSalir.Location = new System.Drawing.Point(301, 355);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
@@ -50,7 +51,7 @@
             // btnEliminarCat
             // 
             this.btnEliminarCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminarCat.Location = new System.Drawing.Point(226, 428);
+            this.btnEliminarCat.Location = new System.Drawing.Point(301, 171);
             this.btnEliminarCat.Name = "btnEliminarCat";
             this.btnEliminarCat.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarCat.TabIndex = 3;
@@ -61,7 +62,7 @@
             // btnModificarCat
             // 
             this.btnModificarCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnModificarCat.Location = new System.Drawing.Point(132, 428);
+            this.btnModificarCat.Location = new System.Drawing.Point(301, 130);
             this.btnModificarCat.Name = "btnModificarCat";
             this.btnModificarCat.Size = new System.Drawing.Size(75, 23);
             this.btnModificarCat.TabIndex = 2;
@@ -71,28 +72,13 @@
             // btnAgregarCat
             // 
             this.btnAgregarCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregarCat.Location = new System.Drawing.Point(35, 428);
+            this.btnAgregarCat.Location = new System.Drawing.Point(301, 87);
             this.btnAgregarCat.Name = "btnAgregarCat";
             this.btnAgregarCat.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarCat.TabIndex = 1;
             this.btnAgregarCat.Text = "Agregar...";
             this.btnAgregarCat.UseVisualStyleBackColor = true;
             this.btnAgregarCat.Click += new System.EventHandler(this.btnAgregarCat_Click);
-            // 
-            // lwCategorias
-            // 
-            this.lwCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lwCategorias.BackColor = System.Drawing.SystemColors.Info;
-            this.lwCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lwCategorias.HideSelection = false;
-            this.lwCategorias.Location = new System.Drawing.Point(37, 82);
-            this.lwCategorias.Name = "lwCategorias";
-            this.lwCategorias.Size = new System.Drawing.Size(621, 323);
-            this.lwCategorias.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.lwCategorias.TabIndex = 0;
-            this.lwCategorias.UseCompatibleStateImageBehavior = false;
             // 
             // lblListadoCategorias
             // 
@@ -106,20 +92,30 @@
             this.lblListadoCategorias.Text = "Categorias Disponibles";
             this.lblListadoCategorias.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // dgvCategorias
+            // 
+            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategorias.Location = new System.Drawing.Point(37, 87);
+            this.dgvCategorias.Name = "dgvCategorias";
+            this.dgvCategorias.Size = new System.Drawing.Size(240, 291);
+            this.dgvCategorias.TabIndex = 6;
+            // 
             // frmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 485);
+            this.ClientSize = new System.Drawing.Size(399, 407);
+            this.Controls.Add(this.dgvCategorias);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminarCat);
             this.Controls.Add(this.btnModificarCat);
             this.Controls.Add(this.btnAgregarCat);
-            this.Controls.Add(this.lwCategorias);
             this.Controls.Add(this.lblListadoCategorias);
             this.Name = "frmCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCategorias";
+            this.Load += new System.EventHandler(this.frmCategorias_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,7 +127,7 @@
         private System.Windows.Forms.Button btnEliminarCat;
         private System.Windows.Forms.Button btnModificarCat;
         private System.Windows.Forms.Button btnAgregarCat;
-        private System.Windows.Forms.ListView lwCategorias;
         private System.Windows.Forms.Label lblListadoCategorias;
+        private System.Windows.Forms.DataGridView dgvCategorias;
     }
 }
