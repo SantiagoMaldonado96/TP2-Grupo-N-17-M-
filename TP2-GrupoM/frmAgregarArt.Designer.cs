@@ -45,6 +45,8 @@
             this.lblLinkImagen = new System.Windows.Forms.Label();
             this.txbUrlImagen = new System.Windows.Forms.TextBox();
             this.txbCodigoArt = new System.Windows.Forms.TextBox();
+            this.pbxAgregarArt = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAgregarArt)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAgregar
@@ -191,6 +193,7 @@
             this.txbUrlImagen.Name = "txbUrlImagen";
             this.txbUrlImagen.Size = new System.Drawing.Size(100, 20);
             this.txbUrlImagen.TabIndex = 6;
+            this.txbUrlImagen.TextChanged += new System.EventHandler(this.txbUrlImagen_TextChanged);
             this.txbUrlImagen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             // 
             // txbCodigoArt
@@ -201,11 +204,24 @@
             this.txbCodigoArt.TabIndex = 0;
             this.txbCodigoArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             // 
+            // pbxAgregarArt
+            // 
+            this.pbxAgregarArt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxAgregarArt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxAgregarArt.Location = new System.Drawing.Point(410, 64);
+            this.pbxAgregarArt.Name = "pbxAgregarArt";
+            this.pbxAgregarArt.Size = new System.Drawing.Size(205, 264);
+            this.pbxAgregarArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxAgregarArt.TabIndex = 9;
+            this.pbxAgregarArt.TabStop = false;
+            // 
             // frmAgregarArt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 446);
+            this.ClientSize = new System.Drawing.Size(648, 401);
+            this.Controls.Add(this.pbxAgregarArt);
             this.Controls.Add(this.txbCodigoArt);
             this.Controls.Add(this.btnCancelarAgregar);
             this.Controls.Add(this.btnAgregarArt);
@@ -228,6 +244,7 @@
             this.Text = "v";
             this.Load += new System.EventHandler(this.frmAgregarArt_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAgregarArt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +269,6 @@
         private System.Windows.Forms.TextBox txbUrlImagen;
         private System.Windows.Forms.TextBox txbCodigoArt;
         public System.Windows.Forms.Button btnAgregarArt;
+        private System.Windows.Forms.PictureBox pbxAgregarArt;
     }
 }

@@ -21,11 +21,30 @@ namespace TP2_GrupoM
             InitializeComponent();
 
         }
+        private void cargarDvgArticulos()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            try
+            {
+                lista = negocio.listar();
+                dvgArticulos.DataSource = lista;
+                dvgArticulos.Columns["Imagen"].Visible = false;
+                cargarImagen(lista[0].Imagen.UrlImagen);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAgregarArt ventana = new frmAgregarArt(this);
             ventana.ShowDialog();
+            cargarDvgArticulos();
         }
 
         private void btnModificarArt_Click(object sender, EventArgs e)
@@ -58,13 +77,10 @@ namespace TP2_GrupoM
             ventana.ShowDialog();
         }
 
+       
         private void frmVentanaListarArticulos_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            lista = negocio.listar();
-            dvgArticulos.DataSource = lista;
-            dvgArticulos.Columns["Imagen"].Visible = false;
-            cargarImagen(lista[0].Imagen.UrlImagen);
+            cargarDvgArticulos();
             
         }
 

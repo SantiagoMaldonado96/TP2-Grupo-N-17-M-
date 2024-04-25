@@ -132,6 +132,7 @@ namespace TP2_GrupoM
             this.dvgArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dvgArticulos.Location = new System.Drawing.Point(26, 81);
+            this.dvgArticulos.MultiSelect = false;
             this.dvgArticulos.Name = "dvgArticulos";
             this.dvgArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgArticulos.Size = new System.Drawing.Size(658, 326);
