@@ -52,8 +52,24 @@ namespace TP2_GrupoM
 
         private void btnEliminarCat_Click(object sender, EventArgs e)
         {
-            EliminarCategoria ventana = new EliminarCategoria();
-            ventana.ShowDialog();
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            Categoria seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Esta seguro de querer eliminar la Categoria seleccionada?", "Eliminar Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+                    negocio.eliminarCategoria(seleccionado.IdCategoria);
+                    cargarDgvCategorias();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void frmCategorias_Load(object sender, EventArgs e)
