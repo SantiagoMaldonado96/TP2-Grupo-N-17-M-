@@ -41,7 +41,7 @@ namespace TP2_GrupoM
                 articulo.Descripcion = txbDescArt.Text;
                 articulo.Marca = (Marca)cboMarcaArt.SelectedItem;
                 articulo.Cat = (Categoria)cboCatArt.SelectedItem;
-                articulo.Precio = float.Parse(txbPrecio.Text);
+                articulo.Precio = decimal.Parse(txbPrecio.Text);
 
                 negocio.agregar(articulo);
                 //leer solo el registro que se subio y traer Id 

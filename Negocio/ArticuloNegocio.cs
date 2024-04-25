@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Dominio;
 using System.Net;
+using System.Data;
 
 namespace Negocio
 {
@@ -18,7 +19,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select Codigo, Nombre, A.Descripcion, M.Descripcion Marca, C.Descripcion Categoria, Precio, ImagenUrl from ARTICULOS A, MARCAS M, CATEGORIAS C, IMAGENES I where A.IdMarca = M.Id and A.IdCategoria = C.Id and A.Id = I.IdArticulo");
+                datos.setearConsulta("select A.Id, Codigo, Nombre, A.Descripcion, M.Descripcion Marca, C.Descripcion Categoria, Precio, ImagenUrl from ARTICULOS A, MARCAS M, CATEGORIAS C, IMAGENES I where A.IdMarca = M.Id and A.IdCategoria = C.Id and A.Id = I.IdArticulo");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -26,6 +27,7 @@ namespace Negocio
                     Articulo aux = new Articulo();
                     //Marca marca = new Marca(); 
                     //Imagen imagen = new Imagen();
+                    aux.Id = (int)datos.Lector["Id"];
                     aux.CodigoArticulo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
@@ -33,7 +35,7 @@ namespace Negocio
                     aux.Marca.NombreMarca = (string)datos.Lector["Marca"];
                     aux.Cat = new Categoria();  
                     aux.Cat.NombreCategoria = (string)datos.Lector["Categoria"];
-                    aux.Precio = (float)datos.Lector.GetDecimal(5);
+                    aux.Precio = (decimal)datos.Lector["Precio"];
                     aux.Imagen = new Imagen();
                     aux.Imagen.UrlImagen = (string)datos.Lector["ImagenUrl"];
 
@@ -96,6 +98,21 @@ namespace Negocio
             
 
             return Id;
+        }
+
+        public void eliminarArticulo(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("Delete From Articulos Where Id = @Id");
+                datos.setearParametro("@Id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

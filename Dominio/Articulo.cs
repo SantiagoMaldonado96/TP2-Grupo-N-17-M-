@@ -11,6 +11,7 @@ namespace Dominio
     {
         //Los datos mínimos con los que deberá contar el artículo son los siguientes:
 
+        public int Id { get; set; }
         [DisplayName("Código")]
         public string CodigoArticulo { get; set; }
         public string Nombre { get; set; }
@@ -20,6 +21,6 @@ namespace Dominio
         [DisplayName("Categoría")]
         public Categoria Cat { get; set; }
         public Imagen Imagen { get; set; }
-        public float Precio { get; set; }
+        public decimal Precio { get; set; }
     }
 }

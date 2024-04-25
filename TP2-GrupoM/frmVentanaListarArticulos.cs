@@ -30,6 +30,7 @@ namespace TP2_GrupoM
                 lista = negocio.listar();
                 dvgArticulos.DataSource = lista;
                 dvgArticulos.Columns["Imagen"].Visible = false;
+                dvgArticulos.Columns["Id"].Visible = false;
                 cargarImagen(lista[0].Imagen.UrlImagen);
 
             }
@@ -73,8 +74,25 @@ namespace TP2_GrupoM
 
         private void btnEliminarArt_Click(object sender, EventArgs e)
         {
-            EliminarArticulo ventana = new EliminarArticulo();
-            ventana.ShowDialog();
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Esta seguro que quiere eliminar el Articulo seleccionado?", "Eliminar Articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dvgArticulos.CurrentRow.DataBoundItem;
+                    negocio.eliminarArticulo(seleccionado.Id);
+                    cargarDvgArticulos();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
        
