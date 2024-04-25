@@ -32,14 +32,15 @@
             this.btnEliminarMarca = new System.Windows.Forms.Button();
             this.btnModificarMarca = new System.Windows.Forms.Button();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
-            this.lwMarcas = new System.Windows.Forms.ListView();
             this.lblListadoMarcas = new System.Windows.Forms.Label();
+            this.dgvMarcas = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(603, 394);
+            this.btnSalir.Location = new System.Drawing.Point(328, 342);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
@@ -50,7 +51,7 @@
             // btnEliminarMarca
             // 
             this.btnEliminarMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminarMarca.Location = new System.Drawing.Point(222, 394);
+            this.btnEliminarMarca.Location = new System.Drawing.Point(328, 137);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
             this.btnEliminarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarMarca.TabIndex = 3;
@@ -61,7 +62,7 @@
             // btnModificarMarca
             // 
             this.btnModificarMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnModificarMarca.Location = new System.Drawing.Point(128, 394);
+            this.btnModificarMarca.Location = new System.Drawing.Point(328, 97);
             this.btnModificarMarca.Name = "btnModificarMarca";
             this.btnModificarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnModificarMarca.TabIndex = 2;
@@ -71,28 +72,13 @@
             // btnAgregarMarca
             // 
             this.btnAgregarMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregarMarca.Location = new System.Drawing.Point(31, 394);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(328, 53);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarMarca.TabIndex = 1;
             this.btnAgregarMarca.Text = "Agregar...";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
             this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
-            // 
-            // lwMarcas
-            // 
-            this.lwMarcas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lwMarcas.BackColor = System.Drawing.SystemColors.Info;
-            this.lwMarcas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lwMarcas.HideSelection = false;
-            this.lwMarcas.Location = new System.Drawing.Point(33, 76);
-            this.lwMarcas.Name = "lwMarcas";
-            this.lwMarcas.Size = new System.Drawing.Size(642, 295);
-            this.lwMarcas.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.lwMarcas.TabIndex = 0;
-            this.lwMarcas.UseCompatibleStateImageBehavior = false;
             // 
             // lblListadoMarcas
             // 
@@ -106,20 +92,30 @@
             this.lblListadoMarcas.Text = "Marcas Disponibles";
             this.lblListadoMarcas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // dgvMarcas
+            // 
+            this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarcas.Location = new System.Drawing.Point(31, 53);
+            this.dgvMarcas.Name = "dgvMarcas";
+            this.dgvMarcas.Size = new System.Drawing.Size(266, 312);
+            this.dgvMarcas.TabIndex = 6;
+            // 
             // frmMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 457);
+            this.ClientSize = new System.Drawing.Size(432, 388);
+            this.Controls.Add(this.dgvMarcas);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminarMarca);
             this.Controls.Add(this.btnModificarMarca);
             this.Controls.Add(this.btnAgregarMarca);
-            this.Controls.Add(this.lwMarcas);
             this.Controls.Add(this.lblListadoMarcas);
             this.Name = "frmMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmMarcas";
+            this.Load += new System.EventHandler(this.frmMarcas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,7 +127,7 @@
         private System.Windows.Forms.Button btnEliminarMarca;
         private System.Windows.Forms.Button btnModificarMarca;
         private System.Windows.Forms.Button btnAgregarMarca;
-        private System.Windows.Forms.ListView lwMarcas;
         private System.Windows.Forms.Label lblListadoMarcas;
+        private System.Windows.Forms.DataGridView dgvMarcas;
     }
 }

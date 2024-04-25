@@ -12,11 +12,27 @@ using Negocio;
 
 namespace TP2_GrupoM
 {
-    public partial class frmMarcas : Form
+    public partial class frmMarcas : Form    
     {
+        private List<Marca> lista;
         public frmMarcas()
         {
             InitializeComponent();
+        }
+
+        private void cargarDgvmarcas()
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+            try
+            {
+                lista = negocio.listar();
+                dgvMarcas.DataSource = lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
@@ -34,6 +50,11 @@ namespace TP2_GrupoM
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmMarcas_Load(object sender, EventArgs e)
+        {
+            cargarDgvmarcas();
         }
     }
 }

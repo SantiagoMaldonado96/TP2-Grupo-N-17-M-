@@ -33,5 +33,27 @@ namespace TP2_GrupoM
                 this.SelectNextControl(this.ActiveControl, true, true, true, true);
             }
         }
+
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            Marca marca = new Marca();
+            MarcaNegocio negocio = new MarcaNegocio();
+
+            try
+            {
+                marca.NombreMarca = txbNombreMarca.Text;
+
+                negocio.agregar(marca);
+
+                MessageBox.Show("Marca agregada con exito");
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            this.Close();
+        }
     }
 }

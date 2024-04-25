@@ -99,6 +99,7 @@
             this.btnAgregarMarca.TabIndex = 2;
             this.btnAgregarMarca.Text = "Agregar";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
+            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
             this.btnAgregarMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarMarca_KeyPress);
             // 
             // frmAgregarMarca
