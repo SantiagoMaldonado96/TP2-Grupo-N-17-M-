@@ -31,6 +31,9 @@ namespace TP2_GrupoM
             Articulo articulo = new Articulo();
             ArticuloNegocio negocio = new ArticuloNegocio();
 
+            Imagen imagen = new Imagen();
+            ImagenNegocio imgNegocio = new ImagenNegocio();
+
             try
             {
                 articulo.CodigoArticulo = txbCodigoArt.Text;
@@ -44,13 +47,19 @@ namespace TP2_GrupoM
                 //leer solo el registro que se subio y traer Id 
                 int idbuscar = negocio.buscarId(articulo);
                 //cargar ahora a tabla imegenes con id y url
+                imagen.IdArtciulo = idbuscar;
+                imagen.UrlImagen = txbUrlImagen.Text;
+
+                imgNegocio.agregar(imagen);
                 MessageBox.Show(idbuscar.ToString());
 
+
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
 
             this.Close();

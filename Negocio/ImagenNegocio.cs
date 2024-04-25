@@ -9,31 +9,24 @@ using System.Net;
 
 namespace Negocio
 {
-    internal class ImagenNegocio
+    public class ImagenNegocio
     {
         public List<Imagen> listar()
         {
             List<Imagen> lista = new List<Imagen>();
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
+            AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Id, IdArticulo, ImagenUrl From Imagenes";
-                comando.Connection = conexion;
+                datos.setearConsulta("Select Id, IdArticulo, ImagenUrl From Imagenes");
+                datos.ejecutarLectura();
 
-                conexion.Open();
-                lector = comando.ExecuteReader();
-
-                while (lector.Read())
+                while (datos.Lector.Read())
                 {
                     Imagen aux = new Imagen();
-                    aux.IdImagen = (int)lector["Id"];
-                    aux.IdArtciulo = (int)lector["IdArticulo"];
-                    aux.UrlImagen = (string)lector["ImagenUrl"];
+                    aux.IdImagen = (int)datos.Lector["Id"];
+                    aux.IdArtciulo = (int)datos.Lector["IdArticulo"];
+                    aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
 
                     lista.Add(aux);
                 }
@@ -45,7 +38,25 @@ namespace Negocio
             }
             finally
             {
-                conexion.Close();
+                datos.cerrarConexion();
+            }
+        }
+
+        public void agregar(Imagen imagen)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) values (" + imagen.IdArtciulo + ",'" + imagen.UrlImagen+"');");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }finally{
+                datos.cerrarConexion();
+
             }
         }
     }

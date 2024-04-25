@@ -13,38 +13,32 @@ namespace Negocio
         public List<Categoria> listar()
         {
             List<Categoria> lista = new List<Categoria>();
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
+            AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Id, Descripcion From CATEGORIAS";
-                comando.Connection = conexion;
+                datos.setearConsulta("Select Id, Descripcion From CATEGORIAS");
+                datos.ejecutarLectura();
 
-                conexion.Open();
-                lector = comando.ExecuteReader();
 
-                while (lector.Read())
+                while (datos.Lector.Read())
                 {
                     Categoria aux = new Categoria();
-                    aux.IdCategoria = (int)lector["Id"];
-                    aux.NombreCategoria = (string)lector["Descripcion"];
+                    aux.IdCategoria = (int)datos.Lector["Id"];
+                    aux.NombreCategoria = (string)datos.Lector["Descripcion"];
 
                     lista.Add(aux);
                 }
                 return lista;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
             finally 
             {
-                conexion.Close();
+                datos.cerrarConexion();
             }
         }
     }
