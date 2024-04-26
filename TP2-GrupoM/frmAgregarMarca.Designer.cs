@@ -96,6 +96,7 @@
             this.Name = "frmAgregarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAgregarMarca";
+            this.Load += new System.EventHandler(this.frmAgregarMarca_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarMarca_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();

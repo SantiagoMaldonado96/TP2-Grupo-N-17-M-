@@ -99,7 +99,7 @@ namespace TP2_GrupoM
             {
 
                 MessageBox.Show(ex.ToString());
-                MessageBox.Show("Articulo seleccionado no valido");
+                MessageBox.Show("Categoria seleccionada no valida");
             }
         }
     }

@@ -14,9 +14,17 @@ namespace TP2_GrupoM
 {
     public partial class frmAgregarMarca : Form
     {
+        private Marca marca=null;
+
         public frmAgregarMarca()
         {
             InitializeComponent();
+        }
+        public frmAgregarMarca(Marca marca)
+        {
+            InitializeComponent();
+            this.marca = marca;
+            Text = "Modificar Marca";
         }
 
         private void btnCancelarMarca_Click(object sender, EventArgs e)
@@ -36,16 +44,27 @@ namespace TP2_GrupoM
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
-            Marca marca = new Marca();
             MarcaNegocio negocio = new MarcaNegocio();
 
             try
             {
+                if (marca == null)
+                    marca = new Marca();
+
                 marca.NombreMarca = txbNombreMarca.Text;
 
-                negocio.agregar(marca);
+                if(marca.IdMarca != 0)
+                {
+                    negocio.ModificarMarca(marca);
+                    MessageBox.Show("Marca modificada con exito");
+                }
+                else
+                {
+                    negocio.agregar(marca);
 
-                MessageBox.Show("Marca agregada con exito");
+                    MessageBox.Show("Marca agregada con exito");
+
+                }
             }
             catch (Exception ex)
             {
@@ -54,6 +73,21 @@ namespace TP2_GrupoM
             }
 
             this.Close();
+        }
+
+        private void frmAgregarMarca_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (marca != null)
+                    //precargar propiedades para modificar
+                    txbNombreMarca.Text = marca.NombreMarca;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

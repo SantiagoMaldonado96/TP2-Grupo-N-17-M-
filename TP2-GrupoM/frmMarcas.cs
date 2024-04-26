@@ -81,5 +81,24 @@ namespace TP2_GrupoM
         {
             cargarDgvmarcas();
         }
+
+        private void btnModificarMarca_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Marca seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+
+                frmAgregarMarca ventanaModificar = new frmAgregarMarca(seleccionado);
+                ventanaModificar.ShowDialog();
+                cargarDgvmarcas();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Marca seleccionada no valida");
+            }
+        }
     }
 }
