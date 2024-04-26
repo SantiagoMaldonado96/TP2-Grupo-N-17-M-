@@ -28,7 +28,7 @@ namespace TP2_GrupoM
             {
                 lista = negocio.listar();
                 dgvCategorias.DataSource = lista;
-                
+                dgvCategorias.Columns["IdCategoria"].Visible = false;
             }
             catch (Exception ex)
             {

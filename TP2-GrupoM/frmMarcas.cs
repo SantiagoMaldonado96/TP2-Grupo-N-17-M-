@@ -27,6 +27,7 @@ namespace TP2_GrupoM
             {
                 lista = negocio.listar();
                 dgvMarcas.DataSource = lista;
+                dgvMarcas.Columns["IdMarca"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -44,8 +45,24 @@ namespace TP2_GrupoM
 
         private void btnEliminarMarca_Click(object sender, EventArgs e)
         {
-            EliminarMarca ventana = new EliminarMarca();
-            ventana.ShowDialog();
+            MarcaNegocio negocio = new MarcaNegocio();
+            Marca seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Esta seguro de querer eliminar la Marca seleccionada?", "Eliminar Marca", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                    negocio.eliminarMarca(seleccionado.IdMarca);
+                    cargarDgvmarcas();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
