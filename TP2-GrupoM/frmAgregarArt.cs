@@ -14,21 +14,24 @@ namespace TP2_GrupoM
 {
     public partial class frmAgregarArt : Form
     {
-        /*//Lista de articulos
-        List<Articulo> listaArticulos = new List<Articulo>();*/
 
-        frmVentanaListarArticulos frmArticulos = new frmVentanaListarArticulos();
 
-        public frmAgregarArt(frmVentanaListarArticulos frmArticulos)
+        private Articulo articulo = null;
+
+        public frmAgregarArt()
         {
             InitializeComponent();
-            //referencia del formulario listarArticulos
-            this.frmArticulos = frmArticulos;
+        }
+        public frmAgregarArt(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar Articulo";
+
         }
 
         private void btnAgregarArt_Click(object sender, EventArgs e)
         {
-            Articulo articulo = new Articulo();
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             Imagen imagen = new Imagen();
@@ -36,6 +39,9 @@ namespace TP2_GrupoM
 
             try
             {
+                if (articulo == null) // Si es null se crea un articulo nuevo
+                    articulo = new Articulo();
+
                 articulo.CodigoArticulo = txbCodigoArt.Text;
                 articulo.Nombre = txbNombreArt.Text;
                 articulo.Descripcion = txbDescArt.Text;
@@ -43,16 +49,34 @@ namespace TP2_GrupoM
                 articulo.Cat = (Categoria)cboCatArt.SelectedItem;
                 articulo.Precio = decimal.Parse(txbPrecio.Text);
 
-                negocio.agregar(articulo);
                 //leer solo el registro que se subio y traer Id 
-                int idbuscar = negocio.buscarId(articulo);
-                //cargar ahora a tabla imegenes con id y url
-                imagen.IdArtciulo = idbuscar;
-                imagen.UrlImagen = txbUrlImagen.Text;
+                //int idbuscar = negocio.buscarId(articulo);
 
-                imgNegocio.agregar(imagen);
-                MessageBox.Show(idbuscar.ToString());
+                if (articulo.Id != 0)
+                {
+                    //MODIFICAR ARTICULO
+                    negocio.ModificarArticulo(articulo);
 
+                    //cargar ahora a tabla imegenes con id y url
+                    articulo.Imagen.IdArtciulo = articulo.Id;
+                    articulo.Imagen.UrlImagen = txbUrlImagen.Text;
+
+                    imgNegocio.modificar(articulo.Imagen);
+                    MessageBox.Show("Modificacion Exitosa");
+                }
+                else
+                {
+                    //AGREGAR ARTICULO
+                    negocio.agregar(articulo);
+
+                    //cargar ahora a tabla imegenes con id y url
+                    imagen.IdArtciulo = articulo.Id;
+                    imagen.UrlImagen = txbUrlImagen.Text;
+
+                    imgNegocio.agregar(imagen);
+                    //MessageBox.Show(idbuscar.ToString());
+                    MessageBox.Show("Articulo agregado");
+                }
 
 
             }
@@ -88,8 +112,27 @@ namespace TP2_GrupoM
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
             try
             {
+                //Configurar los cboMarcaArt y cboCatArt
                 cboMarcaArt.DataSource = marcanegocio.listar();
+                cboMarcaArt.ValueMember = "IdMarca";
+                cboMarcaArt.DisplayMember = "NombreMarca";
+
                 cboCatArt.DataSource = categoriaNegocio.listar();
+                cboCatArt.ValueMember = "IdCategoria";
+                cboCatArt.DisplayMember = "NombreCategoria";
+
+                if (articulo != null)
+                {
+                    //precargar propiedades para modificar
+                    txbCodigoArt.Text = articulo.CodigoArticulo;
+                    txbNombreArt.Text = articulo.Nombre;
+                    txbDescArt.Text = articulo.Descripcion;
+                    txbPrecio.Text = articulo.Precio.ToString();
+                    cboMarcaArt.SelectedValue = articulo.Marca.IdMarca;
+                    cboCatArt.SelectedValue = articulo.Cat.IdCategoria;
+                    txbUrlImagen.Text = articulo.Imagen.UrlImagen;
+                    cargarImagen(txbUrlImagen.Text);
+                }
 
             }
             catch (Exception ex)

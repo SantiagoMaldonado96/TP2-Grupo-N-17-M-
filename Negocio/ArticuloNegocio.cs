@@ -199,5 +199,34 @@ namespace Negocio
             }
             return listaBusqueda;
         }
+
+        public void ModificarArticulo(Articulo art)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE ARTICULOS SET Codigo=@Codigo, Nombre=@Nombre, Descripcion=@Descripcion, IdMarca=@IdMarca, IdCategoria=@IdCategoria, Precio=@Precio WHERE Id=@Id;");
+
+                datos.setearParametro("@Codigo", art.CodigoArticulo);
+                datos.setearParametro("@Nombre", art.Nombre);
+                datos.setearParametro("@Descripcion", art.Descripcion);
+                datos.setearParametro("@IdMarca", art.Marca.IdMarca);
+                datos.setearParametro("@IdCategoria", art.Cat.IdCategoria);
+                datos.setearParametro("@Precio", art.Precio);
+                datos.setearParametro("@Id", art.Id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
     }
 }

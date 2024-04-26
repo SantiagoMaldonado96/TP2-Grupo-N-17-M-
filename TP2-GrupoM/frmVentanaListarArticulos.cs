@@ -43,28 +43,28 @@ namespace TP2_GrupoM
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAgregarArt ventana = new frmAgregarArt(this);
+            frmAgregarArt ventana = new frmAgregarArt();
             ventana.ShowDialog();
             cargarDvgArticulos();
         }
 
         private void btnModificarArt_Click(object sender, EventArgs e)
         {
-            frmModificarArticulo ventanaModificar = new frmModificarArticulo();
+            try
+            {
+                Articulo seleccionado = (Articulo)dvgArticulos.CurrentRow.DataBoundItem;
 
-            //Definir como padre de ventanaModificar
-            AddOwnedForm(ventanaModificar);
+                frmAgregarArt ventanaModificar = new frmAgregarArt(seleccionado);
+                ventanaModificar.ShowDialog();
+                cargarDvgArticulos();
 
-            //Pasar los valores del articulo seleccionado en lwArticulos, a los campos a Modificar
-            /*ventanaModificar.txbCodigoArt.Text = this.dvgArticulos.
-            ventanaModificar.txbNombreArt.Text = this.lwArticulos.SelectedItems[0].SubItems[1].Text;
-            ventanaModificar.txbDescArt.Text = this.lwArticulos.SelectedItems[0].SubItems[2].Text;
-            ventanaModificar.cboMarcaArt.Text = this.lwArticulos.SelectedItems[0].SubItems[3].Text;
-            ventanaModificar.cboCatArt.Text = this.lwArticulos.SelectedItems[0].SubItems[4].Text;
-            ventanaModificar.txbPrecio.Text = this.lwArticulos.SelectedItems[0].SubItems[5].Text;
-            ventanaModificar.txbUrlImagen.Text = this.lwArticulos.SelectedItems[0].SubItems[6].Text;*/
+            }
+            catch (Exception ex)
+            {
 
-            ventanaModificar.ShowDialog();
+                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Articulo seleccionado no valido");
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
