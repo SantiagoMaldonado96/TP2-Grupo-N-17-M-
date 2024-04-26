@@ -122,14 +122,14 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select IdMarca from ARTICULOS");
+                datos.setearConsulta("select IdCategoria from ARTICULOS");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     int valor;
 
-                    valor = (int)datos.Lector["IdMarca"];
+                    valor = (int)datos.Lector["IdCategoria"];
                     lista.Add(valor);
                 }
 
@@ -149,6 +149,40 @@ namespace Negocio
             finally
             {
                 datos.cerrarConexion();
+            }
+        }
+
+        public bool buscarIdMarca(int IdMarca)
+        {
+            List<int> lista = new List<int>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("select IdMarca from ARTICULOS");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    int valor;
+
+                    valor = (int)datos.Lector["IdMarca"];
+                    lista.Add(valor);
+                }
+
+                foreach (int item in lista)
+                {
+                    if(item == IdMarca)
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

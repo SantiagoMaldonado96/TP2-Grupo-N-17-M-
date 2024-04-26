@@ -45,18 +45,25 @@ namespace TP2_GrupoM
 
         private void btnEliminarMarca_Click(object sender, EventArgs e)
         {
+            bool existente;
             MarcaNegocio negocio = new MarcaNegocio();
             Marca seleccionado;
+            ArticuloNegocio negocioArt = new ArticuloNegocio();
 
             try
             {
                 DialogResult respuesta = MessageBox.Show("¿Esta seguro de querer eliminar la Marca seleccionada?", "Eliminar Marca", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                existente = negocioArt.buscarIdMarca(seleccionado.IdMarca);
 
-                if(respuesta == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes && existente == false)
                 {
-                    seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
                     negocio.eliminarMarca(seleccionado.IdMarca);
                     cargarDgvmarcas();
+                }
+                else
+                {
+                    MessageBox.Show("Esta Marca no puede ser eliminaada porque tiene Articulos vinculados");
                 }
             }
             catch (Exception ex)

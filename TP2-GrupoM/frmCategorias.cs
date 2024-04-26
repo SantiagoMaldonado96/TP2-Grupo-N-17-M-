@@ -61,8 +61,6 @@ namespace TP2_GrupoM
             {                
                 DialogResult respuesta = MessageBox.Show("¿Esta seguro de querer eliminar la Categoria seleccionada?", "Eliminar Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
-
-
                 existente = negocioArt.buscarIdCategoria(seleccionado.IdCategoria);
 
                 if (respuesta == DialogResult.Yes && existente == false)
@@ -72,7 +70,7 @@ namespace TP2_GrupoM
                 }
                 else
                 {
-                    MessageBox.Show("Esta Categoria no se puede eliminar porque tiene Articulos vinculados");
+                    MessageBox.Show("Esta Categoria no puede ser eliminada porque tiene Articulos vinculados");
                 }
             }
             catch (Exception ex)
