@@ -185,5 +185,19 @@ namespace Negocio
                 throw;
             }
         }
+
+        public List<Articulo> buscarArticulo(string busqueda)
+        {
+            List<Articulo> listaBusqueda = new List<Articulo>();            
+
+            foreach (Articulo item in listar())
+            {
+                if(item.Nombre == busqueda || item.CodigoArticulo == busqueda)
+                {
+                    listaBusqueda.Add(item);
+                }
+            }
+            return listaBusqueda;
+        }
     }
 }

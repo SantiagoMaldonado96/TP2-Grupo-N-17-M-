@@ -120,5 +120,31 @@ namespace TP2_GrupoM
             Articulo seleccion = (Articulo)dvgArticulos.CurrentRow.DataBoundItem;
             cargarImagen(seleccion.Imagen.UrlImagen);
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();            
+            lista = negocio.buscarArticulo(txtBuscar.Text);
+
+            try
+            {
+                if(txtBuscar.Text == "")
+                {
+                    cargarDvgArticulos();
+                }
+                else
+                {
+                    dvgArticulos.DataSource = lista;
+                    dvgArticulos.Columns["Imagen"].Visible = false;
+                    dvgArticulos.Columns["Id"].Visible = false;
+                    cargarImagen(lista[0].Imagen.UrlImagen);
+                }                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se encontraron coincidencias");
+                cargarDvgArticulos();
+            }
+        }
     }
 }
