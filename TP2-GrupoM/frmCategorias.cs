@@ -52,18 +52,27 @@ namespace TP2_GrupoM
 
         private void btnEliminarCat_Click(object sender, EventArgs e)
         {
+            bool existente;
             CategoriaNegocio negocio = new CategoriaNegocio();
             Categoria seleccionado;
-
+            ArticuloNegocio negocioArt = new ArticuloNegocio();
+            
             try
-            {
+            {                
                 DialogResult respuesta = MessageBox.Show("¿Esta seguro de querer eliminar la Categoria seleccionada?", "Eliminar Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
 
-                if(respuesta == DialogResult.Yes)
+
+                existente = negocioArt.buscarIdCategoria(seleccionado.IdCategoria);
+
+                if (respuesta == DialogResult.Yes && existente == false)
                 {
-                    seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
                     negocio.eliminarCategoria(seleccionado.IdCategoria);
                     cargarDgvCategorias();
+                }
+                else
+                {
+                    MessageBox.Show("Esta Categoria no se puede eliminar porque tiene Articulos vinculados");
                 }
             }
             catch (Exception ex)

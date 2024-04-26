@@ -114,5 +114,42 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        public bool buscarIdCategoria(int idCategoria)
+        {
+            List<int> lista = new List<int>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("select IdMarca from ARTICULOS");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    int valor;
+
+                    valor = (int)datos.Lector["IdMarca"];
+                    lista.Add(valor);
+                }
+
+                foreach (int item in lista)
+                {
+                    if(item == idCategoria)
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

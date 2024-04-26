@@ -101,7 +101,7 @@
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCategorias.Size = new System.Drawing.Size(240, 291);
-            this.dgvCategorias.TabIndex = 6;
+            this.dgvCategorias.TabIndex = 0;
             // 
             // frmCategorias
             // 

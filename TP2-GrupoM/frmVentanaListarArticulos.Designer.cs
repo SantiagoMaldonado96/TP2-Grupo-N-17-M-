@@ -52,7 +52,7 @@ namespace TP2_GrupoM
             this.lblTituloListadoArticulos.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblTituloListadoArticulos.Name = "lblTituloListadoArticulos";
             this.lblTituloListadoArticulos.Size = new System.Drawing.Size(315, 37);
-            this.lblTituloListadoArticulos.TabIndex = 0;
+            this.lblTituloListadoArticulos.TabIndex = 4;
             this.lblTituloListadoArticulos.Text = "Articulos Disponibles";
             this.lblTituloListadoArticulos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -136,7 +136,7 @@ namespace TP2_GrupoM
             this.dvgArticulos.Name = "dvgArticulos";
             this.dvgArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgArticulos.Size = new System.Drawing.Size(658, 326);
-            this.dvgArticulos.TabIndex = 5;
+            this.dvgArticulos.TabIndex = 0;
             this.dvgArticulos.SelectionChanged += new System.EventHandler(this.dvgArticulos_SelectionChanged_1);
             // 
             // pbxArticulo
