@@ -83,5 +83,24 @@ namespace TP2_GrupoM
         {
             cargarDgvCategorias();
         }
+
+        private void btnModificarCat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Categoria seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+
+                frmAgregarCat ventanaModificar = new frmAgregarCat(seleccionado);
+                ventanaModificar.ShowDialog();
+                cargarDgvCategorias();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Articulo seleccionado no valido");
+            }
+        }
     }
 }

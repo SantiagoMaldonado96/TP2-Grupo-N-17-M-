@@ -68,6 +68,7 @@
             this.btnModificarCat.TabIndex = 2;
             this.btnModificarCat.Text = "Modificar...";
             this.btnModificarCat.UseVisualStyleBackColor = true;
+            this.btnModificarCat.Click += new System.EventHandler(this.btnModificarCat_Click);
             // 
             // btnAgregarCat
             // 

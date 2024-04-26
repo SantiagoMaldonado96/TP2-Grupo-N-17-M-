@@ -14,9 +14,16 @@ namespace TP2_GrupoM
 {
     public partial class frmAgregarCat : Form
     {
+        private Categoria categoria = null;
         public frmAgregarCat()
         {
             InitializeComponent();
+        }
+        public frmAgregarCat(Categoria categoria)
+        {
+            InitializeComponent();
+            this.categoria = categoria;
+            Text = "Modificar Categoria";
         }
 
         private void btnCancelarCat_Click(object sender, EventArgs e)
@@ -36,16 +43,27 @@ namespace TP2_GrupoM
 
         private void btnAgregarCat_Click(object sender, EventArgs e)
         {
-            Categoria categoria = new Categoria();
             CategoriaNegocio negocio = new CategoriaNegocio();
 
             try
             {
+                if (categoria == null) // Si es null se crea una categoria nueva
+                    categoria = new Categoria();
+
                 categoria.NombreCategoria = txbNombreCat.Text;
 
-                negocio.agregar(categoria);
+                if(categoria.IdCategoria != 0)
+                {
+                    //MODIFICAR CATEGORIA
+                    negocio.ModificarCategoria(categoria);
+                    MessageBox.Show("Modificacion Exitosa");
+                }
+                else
+                {
+                    negocio.agregar(categoria);
+                    MessageBox.Show(" Categoria \n agregada \n con exito");
+                }
 
-                MessageBox.Show(" Categoria \n agregada \n con exito");
             }
             catch (Exception ex)
             {
@@ -53,6 +71,24 @@ namespace TP2_GrupoM
                 throw ex;
             }
             this.Close();
+        }
+
+        private void frmAgregarCat_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if(categoria != null)
+                {
+                    //precargar propiedades para modificar
+                    txbNombreCat.Text = categoria.NombreCategoria;
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

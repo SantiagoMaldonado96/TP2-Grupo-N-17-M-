@@ -96,6 +96,7 @@
             this.Name = "frmAgregarCat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAgregarCat";
+            this.Load += new System.EventHandler(this.frmAgregarCat_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarCat_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -106,8 +107,8 @@
 
         private System.Windows.Forms.Button btnCancelarCat;
         private System.Windows.Forms.Button btnAgregarCat;
-        private System.Windows.Forms.TextBox txbNombreCat;
         private System.Windows.Forms.Label lblNombreCat;
         private System.Windows.Forms.Label lblAgregarMarca;
+        public System.Windows.Forms.TextBox txbNombreCat;
     }
 }
