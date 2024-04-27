@@ -136,6 +136,7 @@
             this.cboMarcaArt.Name = "cboMarcaArt";
             this.cboMarcaArt.Size = new System.Drawing.Size(100, 21);
             this.cboMarcaArt.TabIndex = 3;
+            this.cboMarcaArt.SelectedIndexChanged += new System.EventHandler(this.cboMarcaArt_SelectedIndexChanged);
             this.cboMarcaArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             // 
             // lblCatArt

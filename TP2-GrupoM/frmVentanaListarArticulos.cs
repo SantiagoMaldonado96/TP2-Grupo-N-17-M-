@@ -11,10 +11,10 @@ using Dominio;
 using Negocio;
 
 namespace TP2_GrupoM
-{    
+{
     public partial class frmVentanaListarArticulos : Form
     {
-        private List<Articulo> lista;  
+        private List<Articulo> lista;
 
         public frmVentanaListarArticulos()
         {
@@ -37,7 +37,7 @@ namespace TP2_GrupoM
             catch (Exception ex)
             {
 
-                throw ex;
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -81,25 +81,31 @@ namespace TP2_GrupoM
             {
                 DialogResult respuesta = MessageBox.Show("¿Esta seguro que quiere eliminar el Articulo seleccionado?", "Eliminar Articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                if(respuesta == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes)
                 {
                     seleccionado = (Articulo)dvgArticulos.CurrentRow.DataBoundItem;
                     negocio.eliminarArticulo(seleccionado.Id);
                     cargarDvgArticulos();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.ToString());
             }
         }
 
-       
+
         private void frmVentanaListarArticulos_Load(object sender, EventArgs e)
         {
             cargarDvgArticulos();
-            
+            //desplegables Filtro Avanzado
+            cboCampo.Items.Add("Codigo");
+            cboCampo.Items.Add("Nombre");
+            cboCampo.Items.Add("A.Descripcion");
+            cboCampo.Items.Add("Marca");
+            cboCampo.Items.Add("Categoria");
+            cboCampo.Items.Add("Precio");
         }
 
         public void cargarImagen(string imagen)
@@ -112,23 +118,48 @@ namespace TP2_GrupoM
             {
                 pbxArticulo.Load("https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?w=740&t=st=1713761428~exp=1713762028~hmac=6cc05cab5ff21644c477ae1afb475c8e48695528279b2f6ce99f879ae6a97242");
             }
-            
+
         }
 
         private void dvgArticulos_SelectionChanged_1(object sender, EventArgs e)
         {
-            Articulo seleccion = (Articulo)dvgArticulos.CurrentRow.DataBoundItem;
-            cargarImagen(seleccion.Imagen.UrlImagen);
+            if (dvgArticulos.CurrentRow != null)
+            {
+                Articulo seleccion = (Articulo)dvgArticulos.CurrentRow.DataBoundItem;
+                cargarImagen(seleccion.Imagen.UrlImagen);
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();            
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            try
+            {
+                if(cboCriterio.SelectedItem != null)
+                {
+                    string campo = cboCampo.SelectedItem.ToString();
+                    string criterio = cboCriterio.SelectedItem.ToString();
+                    string filtro = txbFiltro.Text;
+                    dvgArticulos.DataSource = negocio.filtroAvanzado(campo, criterio, filtro);
+                }
+            }
+            catch (Exception)
+            {
+
+                cargarDvgArticulos();
+            }
+            
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
             lista = negocio.buscarArticulo(txtBuscar.Text);
 
             try
             {
-                if(txtBuscar.Text == "")
+                if (txtBuscar.Text.Length <= 3)
                 {
                     cargarDvgArticulos();
                 }
@@ -138,13 +169,70 @@ namespace TP2_GrupoM
                     dvgArticulos.Columns["Imagen"].Visible = false;
                     dvgArticulos.Columns["Id"].Visible = false;
                     cargarImagen(lista[0].Imagen.UrlImagen);
-                }                
+                }
             }
             catch (Exception)
             {
-                MessageBox.Show("No se encontraron coincidencias");
+
                 cargarDvgArticulos();
             }
+        }
+
+        private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opt = cboCampo.SelectedItem.ToString();
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+
+            try
+            {
+                switch (opt)
+                {
+                    case "Precio":
+                        cboCriterio.DataSource = null;
+                        cboCriterio.Items.Clear();
+                        cboCriterio.Items.Add("Mayor a");
+                        cboCriterio.Items.Add("Igual a");
+                        cboCriterio.Items.Add("Menor a");
+                        break;
+                    case "Marca":
+                        cboCriterio.DataSource = marcaNegocio.listar();
+                        break;
+                    case "Categoria":
+                        cboCriterio.DataSource = categoriaNegocio.listar();
+                        break;
+                    default:
+                        cboCriterio.DataSource = null; //Limpia si Criterio era categoria o marca
+                        cboCriterio.Items.Clear();
+                        cboCriterio.Items.Add("Comienza con");
+                        cboCriterio.Items.Add("Contiene");
+                        cboCriterio.Items.Add("Termina con");
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void cboCriterio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Autocompleatado de tbxFiltro con Marca o Categoria
+            if (cboCampo.SelectedItem.ToString()== "Marca" || cboCampo.SelectedItem.ToString() == "Categoria")
+            {
+                txbFiltro.Text = cboCriterio.SelectedItem.ToString();
+                txbFiltro.ReadOnly = true;
+            }
+            else
+            {
+                txbFiltro.Text = "";
+                txbFiltro.ReadOnly = false;
+            }
+            
+
         }
     }
 }

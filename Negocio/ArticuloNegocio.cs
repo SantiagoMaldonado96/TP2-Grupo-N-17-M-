@@ -156,6 +156,93 @@ namespace Negocio
             }
         }
 
+
+
+
+        public List<Articulo> filtroAvanzado(string campo, string criterio, string filtro)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string consulta = "select A.Id, Codigo, Nombre, A.Descripcion, M.Descripcion Marca, C.Descripcion Categoria, Precio, ImagenUrl, A.IdCategoria, A.IdMarca from ARTICULOS A, MARCAS M, CATEGORIAS C, IMAGENES I where A.IdMarca = M.Id and A.IdCategoria = C.Id and A.Id = I.IdArticulo And ";
+               
+                switch (campo)
+                {
+                    case "Precio":
+                        switch (criterio)
+                        {
+                            case "Mayor a":
+                                consulta += "Precio > "+filtro;
+                                break;
+                            case "Menor a":
+                                consulta += "Precio < "+filtro;
+                                break;
+                            default:
+                                consulta += "Precio = "+filtro;
+                                break;
+                        }
+                        break;
+
+                    case "Marca":
+                        consulta += "M.Descripcion like '%" + filtro + "%'";
+                        break;
+
+                    case "Categoria":
+                        consulta += "C.Descripcion like '%" + filtro + "%'";
+                        break;
+
+                    default:
+                        switch (criterio)
+                        {
+                            case "Comienza con":
+                                consulta += campo+" like '" + filtro + "%' ";
+                                break;
+                            case "Termina con":
+                                consulta += campo+" like '%" + filtro + "' ";
+                                break;
+                            default:
+                                consulta += campo+" like '%" + filtro + "%'";
+                                break;
+                        }
+                        break;
+                }
+                datos.setearConsulta(consulta);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.CodigoArticulo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Marca = new Marca();
+                    aux.Marca.IdMarca = (int)datos.Lector["IdMarca"];
+                    aux.Marca.NombreMarca = (string)datos.Lector["Marca"];
+                    aux.Cat = new Categoria();
+                    aux.Cat.IdCategoria = (int)datos.Lector["IdCategoria"];
+                    aux.Cat.NombreCategoria = (string)datos.Lector["Categoria"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+                    aux.Imagen = new Imagen();
+                    aux.Imagen.IdArtciulo = (int)datos.Lector["Id"];
+                    aux.Imagen.UrlImagen = (string)datos.Lector["ImagenUrl"];
+
+
+                    lista.Add(aux);
+                }
+
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+                
+            }
+        }
+
         public bool buscarIdMarca(int IdMarca)
         {
             List<int> lista = new List<int>();
@@ -196,7 +283,7 @@ namespace Negocio
 
             foreach (Articulo item in listar())
             {
-                if(item.Nombre == busqueda || item.CodigoArticulo == busqueda)
+                if(item.Nombre.ToLower().Contains( busqueda.ToLower()) || item.CodigoArticulo.ToLower() == busqueda.ToLower())
                 {
                     listaBusqueda.Add(item);
                 }

@@ -162,5 +162,10 @@ namespace TP2_GrupoM
         {
             cargarImagen(txbUrlImagen.Text);
         }
+
+        private void cboMarcaArt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
