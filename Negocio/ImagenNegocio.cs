@@ -47,14 +47,16 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) values (" + imagen.IdArtciulo + ",'" + imagen.UrlImagen+"');");
+                datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) values (" + imagen.IdArtciulo + ",'" + imagen.UrlImagen + "');");
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
 
                 throw ex;
-            }finally{
+            }
+            finally
+            {
                 datos.cerrarConexion();
 
             }
@@ -64,9 +66,11 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("UPDATE IMAGENES SET IdArticulo=@IdArticulo, ImagenUrl=@ImagenUrl WHERE Id=@IdArticulo");
+                datos.setearConsulta("UPDATE IMAGENES SET IdArticulo=@IdArticulo, ImagenUrl=@ImagenUrl WHERE Id=@Id");
                 datos.setearParametro("@IdArticulo", imagen.IdArtciulo);
                 datos.setearParametro("@ImagenUrl", imagen.UrlImagen);
+                datos.setearParametro("@Id", imagen.IdImagen);
+
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

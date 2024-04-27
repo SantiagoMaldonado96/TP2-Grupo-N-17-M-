@@ -49,16 +49,17 @@ namespace TP2_GrupoM
                 articulo.Cat = (Categoria)cboCatArt.SelectedItem;
                 articulo.Precio = decimal.Parse(txbPrecio.Text);
 
-                //leer solo el registro que se subio y traer Id 
-                //int idbuscar = negocio.buscarId(articulo);
 
+                int idbuscar;
                 if (articulo.Id != 0)
                 {
                     //MODIFICAR ARTICULO
                     negocio.ModificarArticulo(articulo);
 
+                    //leer solo el registro que se subio y traer Id 
+                    idbuscar = negocio.buscarId(articulo);
                     //cargar ahora a tabla imegenes con id y url
-                    articulo.Imagen.IdArtciulo = articulo.Id;
+                    articulo.Imagen.IdArtciulo = idbuscar;
                     articulo.Imagen.UrlImagen = txbUrlImagen.Text;
 
                     imgNegocio.modificar(articulo.Imagen);
@@ -69,8 +70,10 @@ namespace TP2_GrupoM
                     //AGREGAR ARTICULO
                     negocio.agregar(articulo);
 
+                    //leer solo el registro que se subio y traer Id 
+                    idbuscar = negocio.buscarId(articulo);
                     //cargar ahora a tabla imegenes con id y url
-                    imagen.IdArtciulo = articulo.Id;
+                    imagen.IdArtciulo = idbuscar;
                     imagen.UrlImagen = txbUrlImagen.Text;
 
                     imgNegocio.agregar(imagen);

@@ -56,7 +56,7 @@ namespace TP2_GrupoM
 
                 frmAgregarArt ventanaModificar = new frmAgregarArt(seleccionado);
                 ventanaModificar.ShowDialog();
-                cargarDvgArticulos();
+                dvgArticulos.Refresh();
 
             }
             catch (Exception ex)
