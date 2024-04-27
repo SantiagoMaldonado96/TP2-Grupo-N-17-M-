@@ -33,6 +33,7 @@ namespace TP2_GrupoM
                 dvgArticulos.Columns["Id"].Visible = false;
                 cargarImagen(lista[0].Imagen.UrlImagen);
 
+                stlblNumeroArticulos.Text = negocio.listar().Count().ToString();
             }
             catch (Exception ex)
             {
@@ -220,8 +221,9 @@ namespace TP2_GrupoM
 
         private void cboCriterio_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string campo= cboCampo.SelectedItem.ToString();
             //Autocompleatado de tbxFiltro con Marca o Categoria
-            if (cboCampo.SelectedItem.ToString()== "Marca" || cboCampo.SelectedItem.ToString() == "Categoria")
+            if (campo== "Marca" || campo == "Categoria")
             {
                 txbFiltro.Text = cboCriterio.SelectedItem.ToString();
                 txbFiltro.ReadOnly = true;
