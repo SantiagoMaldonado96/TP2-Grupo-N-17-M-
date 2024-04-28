@@ -63,15 +63,16 @@ namespace TP2_GrupoM
                 seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
                 existente = negocioArt.buscarIdCategoria(seleccionado.IdCategoria);
 
-                if (respuesta == DialogResult.Yes && existente == false)
-                {
-                    negocio.eliminarCategoria(seleccionado.IdCategoria);
-                    cargarDgvCategorias();
-                }
-                else
-                {
-                    MessageBox.Show("Esta Categoria no puede ser eliminada porque tiene Articulos vinculados");
-                }
+                if (respuesta == DialogResult.Yes)
+                    if(existente == false)
+                     {
+                         negocio.eliminarCategoria(seleccionado.IdCategoria);
+                         cargarDgvCategorias();
+                     }   
+                    else
+                        {
+                            MessageBox.Show("Esta Categoria no puede ser eliminada porque tiene Articulos vinculados");
+                    }
             }
             catch (Exception ex)
             {

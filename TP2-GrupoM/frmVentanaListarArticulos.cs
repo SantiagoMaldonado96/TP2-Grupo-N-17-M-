@@ -236,5 +236,10 @@ namespace TP2_GrupoM
             
 
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            cargarDvgArticulos();
+        }
     }
 }

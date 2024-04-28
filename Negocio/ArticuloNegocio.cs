@@ -24,6 +24,7 @@ namespace Negocio
 
                 while (datos.Lector.Read())
                 {
+                    //if(aux.Id = (int)datos.Lector["Id"] != id actual)
                     Articulo aux = new Articulo();
                     //Marca marca = new Marca(); 
                     //Imagen imagen = new Imagen();
@@ -42,7 +43,7 @@ namespace Negocio
                     aux.Imagen.IdArtciulo = (int)datos.Lector["Id"];
                     aux.Imagen.UrlImagen = (string)datos.Lector["ImagenUrl"];
 
-
+                    //id actual
                     lista.Add(aux);
                 }
                 return lista;

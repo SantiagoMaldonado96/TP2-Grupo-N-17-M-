@@ -56,19 +56,20 @@ namespace TP2_GrupoM
                 seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
                 existente = negocioArt.buscarIdMarca(seleccionado.IdMarca);
 
-                if (respuesta == DialogResult.Yes && existente == false)
-                {
+                if (respuesta == DialogResult.Yes)
+                    if(existente == false)
+                    {
                     negocio.eliminarMarca(seleccionado.IdMarca);
                     cargarDgvmarcas();
-                }
-                else
-                {
+                    }
+                    else
+                    {
                     MessageBox.Show("Esta Marca no puede ser eliminaada porque tiene Articulos vinculados");
-                }
+                    }
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.ToString());
             }
         }
 

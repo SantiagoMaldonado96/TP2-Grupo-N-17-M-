@@ -40,7 +40,7 @@
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(301, 355);
+            this.btnSalir.Location = new System.Drawing.Point(298, 412);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
@@ -50,8 +50,8 @@
             // 
             // btnEliminarCat
             // 
-            this.btnEliminarCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminarCat.Location = new System.Drawing.Point(301, 171);
+            this.btnEliminarCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarCat.Location = new System.Drawing.Point(298, 171);
             this.btnEliminarCat.Name = "btnEliminarCat";
             this.btnEliminarCat.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarCat.TabIndex = 3;
@@ -61,8 +61,8 @@
             // 
             // btnModificarCat
             // 
-            this.btnModificarCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnModificarCat.Location = new System.Drawing.Point(301, 130);
+            this.btnModificarCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificarCat.Location = new System.Drawing.Point(298, 129);
             this.btnModificarCat.Name = "btnModificarCat";
             this.btnModificarCat.Size = new System.Drawing.Size(75, 23);
             this.btnModificarCat.TabIndex = 2;
@@ -72,8 +72,8 @@
             // 
             // btnAgregarCat
             // 
-            this.btnAgregarCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregarCat.Location = new System.Drawing.Point(301, 87);
+            this.btnAgregarCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarCat.Location = new System.Drawing.Point(298, 87);
             this.btnAgregarCat.Name = "btnAgregarCat";
             this.btnAgregarCat.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarCat.TabIndex = 1;
@@ -95,20 +95,23 @@
             // 
             // dgvCategorias
             // 
+            this.dgvCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategorias.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvCategorias.Location = new System.Drawing.Point(37, 87);
             this.dgvCategorias.MultiSelect = false;
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCategorias.Size = new System.Drawing.Size(240, 291);
+            this.dgvCategorias.Size = new System.Drawing.Size(255, 348);
             this.dgvCategorias.TabIndex = 0;
             // 
             // frmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 407);
+            this.ClientSize = new System.Drawing.Size(394, 464);
             this.Controls.Add(this.dgvCategorias);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminarCat);

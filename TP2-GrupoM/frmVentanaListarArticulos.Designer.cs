@@ -29,6 +29,7 @@ namespace TP2_GrupoM
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentanaListarArticulos));
             this.lblTituloListadoArticulos = new System.Windows.Forms.Label();
             this.sstCantidadArticulos = new System.Windows.Forms.StatusStrip();
             this.stlblCantidadArticulos = new System.Windows.Forms.ToolStripStatusLabel();
@@ -48,6 +49,7 @@ namespace TP2_GrupoM
             this.lblCriterio = new System.Windows.Forms.Label();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.txbFiltro = new System.Windows.Forms.TextBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.sstCantidadArticulos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
@@ -70,9 +72,9 @@ namespace TP2_GrupoM
             this.sstCantidadArticulos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stlblCantidadArticulos,
             this.stlblNumeroArticulos});
-            this.sstCantidadArticulos.Location = new System.Drawing.Point(0, 537);
+            this.sstCantidadArticulos.Location = new System.Drawing.Point(0, 530);
             this.sstCantidadArticulos.Name = "sstCantidadArticulos";
-            this.sstCantidadArticulos.Size = new System.Drawing.Size(978, 22);
+            this.sstCantidadArticulos.Size = new System.Drawing.Size(989, 22);
             this.sstCantidadArticulos.TabIndex = 2;
             this.sstCantidadArticulos.Text = "statusStrip1";
             // 
@@ -91,10 +93,11 @@ namespace TP2_GrupoM
             // 
             // btnAgregarArt
             // 
-            this.btnAgregarArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregarArt.Location = new System.Drawing.Point(30, 434);
+            this.btnAgregarArt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarArt.Location = new System.Drawing.Point(30, 427);
             this.btnAgregarArt.Name = "btnAgregarArt";
-            this.btnAgregarArt.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarArt.Size = new System.Drawing.Size(86, 23);
             this.btnAgregarArt.TabIndex = 1;
             this.btnAgregarArt.Text = "Agregar...";
             this.btnAgregarArt.UseVisualStyleBackColor = true;
@@ -102,10 +105,11 @@ namespace TP2_GrupoM
             // 
             // btnModificarArt
             // 
-            this.btnModificarArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnModificarArt.Location = new System.Drawing.Point(127, 434);
+            this.btnModificarArt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificarArt.Location = new System.Drawing.Point(127, 427);
             this.btnModificarArt.Name = "btnModificarArt";
-            this.btnModificarArt.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarArt.Size = new System.Drawing.Size(86, 23);
             this.btnModificarArt.TabIndex = 2;
             this.btnModificarArt.Text = "Modificar...";
             this.btnModificarArt.UseVisualStyleBackColor = true;
@@ -113,10 +117,11 @@ namespace TP2_GrupoM
             // 
             // btnEliminarArt
             // 
-            this.btnEliminarArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminarArt.Location = new System.Drawing.Point(221, 434);
+            this.btnEliminarArt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarArt.Location = new System.Drawing.Point(221, 427);
             this.btnEliminarArt.Name = "btnEliminarArt";
-            this.btnEliminarArt.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarArt.Size = new System.Drawing.Size(86, 23);
             this.btnEliminarArt.TabIndex = 3;
             this.btnEliminarArt.Text = "Eliminar...";
             this.btnEliminarArt.UseVisualStyleBackColor = true;
@@ -125,7 +130,7 @@ namespace TP2_GrupoM
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(866, 434);
+            this.btnSalir.Location = new System.Drawing.Point(902, 487);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
@@ -143,33 +148,38 @@ namespace TP2_GrupoM
             this.dvgArticulos.MultiSelect = false;
             this.dvgArticulos.Name = "dvgArticulos";
             this.dvgArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgArticulos.Size = new System.Drawing.Size(658, 326);
+            this.dvgArticulos.Size = new System.Drawing.Size(684, 326);
             this.dvgArticulos.TabIndex = 0;
             this.dvgArticulos.SelectionChanged += new System.EventHandler(this.dvgArticulos_SelectionChanged_1);
             // 
             // pbxArticulo
             // 
-            this.pbxArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbxArticulo.Location = new System.Drawing.Point(690, 81);
+            this.pbxArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxArticulo.Location = new System.Drawing.Point(733, 81);
             this.pbxArticulo.Name = "pbxArticulo";
-            this.pbxArticulo.Size = new System.Drawing.Size(251, 326);
+            this.pbxArticulo.Size = new System.Drawing.Size(244, 326);
             this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxArticulo.TabIndex = 6;
             this.pbxArticulo.TabStop = false;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(499, 432);
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscar.Location = new System.Drawing.Point(514, 427);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(185, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(196, 20);
             this.txtBuscar.TabIndex = 7;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(624, 494);
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.Location = new System.Drawing.Point(624, 487);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 20);
+            this.btnBuscar.Size = new System.Drawing.Size(86, 20);
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -177,8 +187,10 @@ namespace TP2_GrupoM
             // 
             // lblFiltroRapido
             // 
+            this.lblFiltroRapido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFiltroRapido.AutoSize = true;
-            this.lblFiltroRapido.Location = new System.Drawing.Point(424, 434);
+            this.lblFiltroRapido.Location = new System.Drawing.Point(439, 430);
             this.lblFiltroRapido.Name = "lblFiltroRapido";
             this.lblFiltroRapido.Size = new System.Drawing.Size(69, 13);
             this.lblFiltroRapido.TabIndex = 9;
@@ -186,9 +198,11 @@ namespace TP2_GrupoM
             // 
             // lblCampo
             // 
+            this.lblCampo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCampo.AutoSize = true;
             this.lblCampo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblCampo.Location = new System.Drawing.Point(30, 498);
+            this.lblCampo.Location = new System.Drawing.Point(32, 492);
             this.lblCampo.Name = "lblCampo";
             this.lblCampo.Size = new System.Drawing.Size(43, 13);
             this.lblCampo.TabIndex = 10;
@@ -196,28 +210,34 @@ namespace TP2_GrupoM
             // 
             // cboCampo
             // 
+            this.cboCampo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCampo.FormattingEnabled = true;
-            this.cboCampo.Location = new System.Drawing.Point(81, 494);
+            this.cboCampo.Location = new System.Drawing.Point(81, 487);
             this.cboCampo.Name = "cboCampo";
-            this.cboCampo.Size = new System.Drawing.Size(121, 21);
+            this.cboCampo.Size = new System.Drawing.Size(132, 21);
             this.cboCampo.TabIndex = 11;
             this.cboCampo.SelectedIndexChanged += new System.EventHandler(this.cboCampo_SelectedIndexChanged);
             // 
             // cboCriterio
             // 
+            this.cboCriterio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCriterio.FormattingEnabled = true;
-            this.cboCriterio.Location = new System.Drawing.Point(284, 494);
+            this.cboCriterio.Location = new System.Drawing.Point(284, 487);
             this.cboCriterio.Name = "cboCriterio";
-            this.cboCriterio.Size = new System.Drawing.Size(121, 21);
+            this.cboCriterio.Size = new System.Drawing.Size(132, 21);
             this.cboCriterio.TabIndex = 13;
             this.cboCriterio.SelectedIndexChanged += new System.EventHandler(this.cboCriterio_SelectedIndexChanged);
             // 
             // lblCriterio
             // 
+            this.lblCriterio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCriterio.AutoSize = true;
-            this.lblCriterio.Location = new System.Drawing.Point(233, 498);
+            this.lblCriterio.Location = new System.Drawing.Point(236, 492);
             this.lblCriterio.Name = "lblCriterio";
             this.lblCriterio.Size = new System.Drawing.Size(42, 13);
             this.lblCriterio.TabIndex = 12;
@@ -225,25 +245,43 @@ namespace TP2_GrupoM
             // 
             // lblFiltro
             // 
+            this.lblFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFiltro.AutoSize = true;
-            this.lblFiltro.Location = new System.Drawing.Point(446, 498);
+            this.lblFiltro.Location = new System.Drawing.Point(452, 491);
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(29, 13);
+            this.lblFiltro.Size = new System.Drawing.Size(32, 13);
             this.lblFiltro.TabIndex = 14;
-            this.lblFiltro.Text = "Filtro";
+            this.lblFiltro.Text = "Filtro:";
             // 
             // txbFiltro
             // 
-            this.txbFiltro.Location = new System.Drawing.Point(487, 494);
+            this.txbFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFiltro.Location = new System.Drawing.Point(487, 487);
             this.txbFiltro.Name = "txbFiltro";
-            this.txbFiltro.Size = new System.Drawing.Size(100, 20);
+            this.txbFiltro.Size = new System.Drawing.Size(111, 20);
             this.txbFiltro.TabIndex = 15;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActualizar.BackgroundImage")));
+            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnActualizar.Location = new System.Drawing.Point(317, 427);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(37, 23);
+            this.btnActualizar.TabIndex = 16;
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // frmVentanaListarArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(978, 559);
+            this.ClientSize = new System.Drawing.Size(989, 552);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.txbFiltro);
             this.Controls.Add(this.lblFiltro);
             this.Controls.Add(this.cboCriterio);
@@ -297,5 +335,6 @@ namespace TP2_GrupoM
         private System.Windows.Forms.Label lblCriterio;
         private System.Windows.Forms.Label lblFiltro;
         private System.Windows.Forms.TextBox txbFiltro;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }
