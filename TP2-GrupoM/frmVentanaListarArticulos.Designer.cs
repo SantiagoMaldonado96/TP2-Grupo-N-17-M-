@@ -63,7 +63,7 @@ namespace TP2_GrupoM
             this.lblTituloListadoArticulos.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblTituloListadoArticulos.Name = "lblTituloListadoArticulos";
             this.lblTituloListadoArticulos.Size = new System.Drawing.Size(315, 37);
-            this.lblTituloListadoArticulos.TabIndex = 4;
+            this.lblTituloListadoArticulos.TabIndex = 0;
             this.lblTituloListadoArticulos.Text = "Articulos Disponibles";
             this.lblTituloListadoArticulos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -75,7 +75,7 @@ namespace TP2_GrupoM
             this.sstCantidadArticulos.Location = new System.Drawing.Point(0, 530);
             this.sstCantidadArticulos.Name = "sstCantidadArticulos";
             this.sstCantidadArticulos.Size = new System.Drawing.Size(989, 22);
-            this.sstCantidadArticulos.TabIndex = 2;
+            this.sstCantidadArticulos.TabIndex = 0;
             this.sstCantidadArticulos.Text = "statusStrip1";
             // 
             // stlblCantidadArticulos
@@ -98,7 +98,7 @@ namespace TP2_GrupoM
             this.btnAgregarArt.Location = new System.Drawing.Point(30, 427);
             this.btnAgregarArt.Name = "btnAgregarArt";
             this.btnAgregarArt.Size = new System.Drawing.Size(86, 23);
-            this.btnAgregarArt.TabIndex = 1;
+            this.btnAgregarArt.TabIndex = 2;
             this.btnAgregarArt.Text = "Agregar...";
             this.btnAgregarArt.UseVisualStyleBackColor = true;
             this.btnAgregarArt.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -110,7 +110,7 @@ namespace TP2_GrupoM
             this.btnModificarArt.Location = new System.Drawing.Point(127, 427);
             this.btnModificarArt.Name = "btnModificarArt";
             this.btnModificarArt.Size = new System.Drawing.Size(86, 23);
-            this.btnModificarArt.TabIndex = 2;
+            this.btnModificarArt.TabIndex = 3;
             this.btnModificarArt.Text = "Modificar...";
             this.btnModificarArt.UseVisualStyleBackColor = true;
             this.btnModificarArt.Click += new System.EventHandler(this.btnModificarArt_Click);
@@ -122,7 +122,7 @@ namespace TP2_GrupoM
             this.btnEliminarArt.Location = new System.Drawing.Point(221, 427);
             this.btnEliminarArt.Name = "btnEliminarArt";
             this.btnEliminarArt.Size = new System.Drawing.Size(86, 23);
-            this.btnEliminarArt.TabIndex = 3;
+            this.btnEliminarArt.TabIndex = 4;
             this.btnEliminarArt.Text = "Eliminar...";
             this.btnEliminarArt.UseVisualStyleBackColor = true;
             this.btnEliminarArt.Click += new System.EventHandler(this.btnEliminarArt_Click);
@@ -130,10 +130,11 @@ namespace TP2_GrupoM
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSalir.Location = new System.Drawing.Point(902, 487);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 4;
+            this.btnSalir.TabIndex = 11;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -170,7 +171,7 @@ namespace TP2_GrupoM
             this.txtBuscar.Location = new System.Drawing.Point(514, 427);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(196, 20);
-            this.txtBuscar.TabIndex = 7;
+            this.txtBuscar.TabIndex = 6;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnBuscar
@@ -180,7 +181,7 @@ namespace TP2_GrupoM
             this.btnBuscar.Location = new System.Drawing.Point(624, 487);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(86, 20);
-            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -193,7 +194,7 @@ namespace TP2_GrupoM
             this.lblFiltroRapido.Location = new System.Drawing.Point(439, 430);
             this.lblFiltroRapido.Name = "lblFiltroRapido";
             this.lblFiltroRapido.Size = new System.Drawing.Size(69, 13);
-            this.lblFiltroRapido.TabIndex = 9;
+            this.lblFiltroRapido.TabIndex = 0;
             this.lblFiltroRapido.Text = "Filtro Rapido:";
             // 
             // lblCampo
@@ -205,7 +206,7 @@ namespace TP2_GrupoM
             this.lblCampo.Location = new System.Drawing.Point(32, 492);
             this.lblCampo.Name = "lblCampo";
             this.lblCampo.Size = new System.Drawing.Size(43, 13);
-            this.lblCampo.TabIndex = 10;
+            this.lblCampo.TabIndex = 0;
             this.lblCampo.Text = "Campo:";
             // 
             // cboCampo
@@ -217,7 +218,7 @@ namespace TP2_GrupoM
             this.cboCampo.Location = new System.Drawing.Point(81, 487);
             this.cboCampo.Name = "cboCampo";
             this.cboCampo.Size = new System.Drawing.Size(132, 21);
-            this.cboCampo.TabIndex = 11;
+            this.cboCampo.TabIndex = 7;
             this.cboCampo.SelectedIndexChanged += new System.EventHandler(this.cboCampo_SelectedIndexChanged);
             // 
             // cboCriterio
@@ -229,7 +230,7 @@ namespace TP2_GrupoM
             this.cboCriterio.Location = new System.Drawing.Point(284, 487);
             this.cboCriterio.Name = "cboCriterio";
             this.cboCriterio.Size = new System.Drawing.Size(132, 21);
-            this.cboCriterio.TabIndex = 13;
+            this.cboCriterio.TabIndex = 8;
             this.cboCriterio.SelectedIndexChanged += new System.EventHandler(this.cboCriterio_SelectedIndexChanged);
             // 
             // lblCriterio
@@ -240,7 +241,7 @@ namespace TP2_GrupoM
             this.lblCriterio.Location = new System.Drawing.Point(236, 492);
             this.lblCriterio.Name = "lblCriterio";
             this.lblCriterio.Size = new System.Drawing.Size(42, 13);
-            this.lblCriterio.TabIndex = 12;
+            this.lblCriterio.TabIndex = 0;
             this.lblCriterio.Text = "Criterio:";
             // 
             // lblFiltro
@@ -251,7 +252,7 @@ namespace TP2_GrupoM
             this.lblFiltro.Location = new System.Drawing.Point(452, 491);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(32, 13);
-            this.lblFiltro.TabIndex = 14;
+            this.lblFiltro.TabIndex = 0;
             this.lblFiltro.Text = "Filtro:";
             // 
             // txbFiltro
@@ -261,7 +262,7 @@ namespace TP2_GrupoM
             this.txbFiltro.Location = new System.Drawing.Point(487, 487);
             this.txbFiltro.Name = "txbFiltro";
             this.txbFiltro.Size = new System.Drawing.Size(111, 20);
-            this.txbFiltro.TabIndex = 15;
+            this.txbFiltro.TabIndex = 9;
             // 
             // btnActualizar
             // 
@@ -272,7 +273,7 @@ namespace TP2_GrupoM
             this.btnActualizar.Location = new System.Drawing.Point(317, 427);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(37, 23);
-            this.btnActualizar.TabIndex = 16;
+            this.btnActualizar.TabIndex = 5;
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
@@ -280,6 +281,7 @@ namespace TP2_GrupoM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(989, 552);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.txbFiltro);

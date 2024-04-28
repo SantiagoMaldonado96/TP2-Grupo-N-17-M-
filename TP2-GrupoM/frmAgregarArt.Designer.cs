@@ -171,6 +171,7 @@
             // 
             // btnCancelarAgregar
             // 
+            this.btnCancelarAgregar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelarAgregar.Location = new System.Drawing.Point(240, 354);
             this.btnCancelarAgregar.Name = "btnCancelarAgregar";
             this.btnCancelarAgregar.Size = new System.Drawing.Size(75, 23);
@@ -221,6 +222,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelarAgregar;
             this.ClientSize = new System.Drawing.Size(648, 401);
             this.Controls.Add(this.pbxAgregarArt);
             this.Controls.Add(this.txbCodigoArt);
@@ -240,6 +242,8 @@
             this.Controls.Add(this.lblCodArt);
             this.Controls.Add(this.lblNombreArt);
             this.Controls.Add(this.lblAgregar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmAgregarArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "v";

@@ -37,6 +37,7 @@
             // 
             // btnCancelarCat
             // 
+            this.btnCancelarCat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelarCat.Location = new System.Drawing.Point(219, 173);
             this.btnCancelarCat.Name = "btnCancelarCat";
             this.btnCancelarCat.Size = new System.Drawing.Size(75, 23);
@@ -70,7 +71,7 @@
             this.lblNombreCat.Location = new System.Drawing.Point(114, 109);
             this.lblNombreCat.Name = "lblNombreCat";
             this.lblNombreCat.Size = new System.Drawing.Size(47, 13);
-            this.lblNombreCat.TabIndex = 19;
+            this.lblNombreCat.TabIndex = 0;
             this.lblNombreCat.Text = "Nombre:";
             // 
             // lblAgregarMarca
@@ -80,19 +81,22 @@
             this.lblAgregarMarca.Location = new System.Drawing.Point(50, 33);
             this.lblAgregarMarca.Name = "lblAgregarMarca";
             this.lblAgregarMarca.Size = new System.Drawing.Size(327, 40);
-            this.lblAgregarMarca.TabIndex = 16;
+            this.lblAgregarMarca.TabIndex = 0;
             this.lblAgregarMarca.Text = "Agregar Categoria";
             // 
             // frmAgregarCat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelarCat;
             this.ClientSize = new System.Drawing.Size(408, 223);
             this.Controls.Add(this.btnCancelarCat);
             this.Controls.Add(this.btnAgregarCat);
             this.Controls.Add(this.txbNombreCat);
             this.Controls.Add(this.lblNombreCat);
             this.Controls.Add(this.lblAgregarMarca);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmAgregarCat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAgregarCat";

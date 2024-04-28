@@ -40,6 +40,7 @@
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSalir.Location = new System.Drawing.Point(317, 415);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
@@ -89,7 +90,7 @@
             this.lblListadoMarcas.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblListadoMarcas.Name = "lblListadoMarcas";
             this.lblListadoMarcas.Size = new System.Drawing.Size(296, 37);
-            this.lblListadoMarcas.TabIndex = 5;
+            this.lblListadoMarcas.TabIndex = 0;
             this.lblListadoMarcas.Text = "Marcas Disponibles";
             this.lblListadoMarcas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -111,6 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(404, 459);
             this.Controls.Add(this.dgvMarcas);
             this.Controls.Add(this.btnSalir);
@@ -118,6 +120,8 @@
             this.Controls.Add(this.btnModificarMarca);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.lblListadoMarcas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmMarcas";

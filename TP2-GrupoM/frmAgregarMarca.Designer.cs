@@ -87,12 +87,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelarMarca;
             this.ClientSize = new System.Drawing.Size(376, 200);
             this.Controls.Add(this.btnCancelarMarca);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.txbNombreMarca);
             this.Controls.Add(this.lblNombreMarca);
             this.Controls.Add(this.lblAgregarMarca);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmAgregarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAgregarMarca";
