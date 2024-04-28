@@ -27,6 +27,7 @@ namespace TP2_GrupoM
             InitializeComponent();
             this.articulo = articulo;
             Text = "Modificar Articulo";
+            lblAgregar.Text= "Modificar Articulo";
 
         }
 

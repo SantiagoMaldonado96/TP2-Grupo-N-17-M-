@@ -42,7 +42,7 @@
             this.btnCancelarCat.Name = "btnCancelarCat";
             this.btnCancelarCat.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarCat.TabIndex = 3;
-            this.btnCancelarCat.Text = "Cancelar";
+            this.btnCancelarCat.Text = "C&ancelar";
             this.btnCancelarCat.UseVisualStyleBackColor = true;
             this.btnCancelarCat.Click += new System.EventHandler(this.btnCancelarCat_Click);
             // 
@@ -52,7 +52,7 @@
             this.btnAgregarCat.Name = "btnAgregarCat";
             this.btnAgregarCat.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarCat.TabIndex = 2;
-            this.btnAgregarCat.Text = "Agregar";
+            this.btnAgregarCat.Text = "A&gregar";
             this.btnAgregarCat.UseVisualStyleBackColor = true;
             this.btnAgregarCat.Click += new System.EventHandler(this.btnAgregarCat_Click);
             this.btnAgregarCat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarCat_KeyPress);
@@ -99,7 +99,7 @@
             this.MaximizeBox = false;
             this.Name = "frmAgregarCat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmAgregarCat";
+            this.Text = "Agregar Categoria";
             this.Load += new System.EventHandler(this.frmAgregarCat_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarCat_KeyPress);
             this.ResumeLayout(false);

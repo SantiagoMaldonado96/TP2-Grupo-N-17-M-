@@ -64,11 +64,12 @@
             // 
             // btnCancelarMarca
             // 
+            this.btnCancelarMarca.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelarMarca.Location = new System.Drawing.Point(204, 141);
             this.btnCancelarMarca.Name = "btnCancelarMarca";
             this.btnCancelarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarMarca.TabIndex = 3;
-            this.btnCancelarMarca.Text = "Cancelar";
+            this.btnCancelarMarca.Text = "C&ancelar";
             this.btnCancelarMarca.UseVisualStyleBackColor = true;
             this.btnCancelarMarca.Click += new System.EventHandler(this.btnCancelarMarca_Click);
             // 
@@ -78,7 +79,7 @@
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarMarca.TabIndex = 2;
-            this.btnAgregarMarca.Text = "Agregar";
+            this.btnAgregarMarca.Text = "A&gregar";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
             this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
             this.btnAgregarMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarMarca_KeyPress);
@@ -98,7 +99,7 @@
             this.MaximizeBox = false;
             this.Name = "frmAgregarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmAgregarMarca";
+            this.Text = "Agregar Marca";
             this.Load += new System.EventHandler(this.frmAgregarMarca_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarMarca_KeyPress);
             this.ResumeLayout(false);

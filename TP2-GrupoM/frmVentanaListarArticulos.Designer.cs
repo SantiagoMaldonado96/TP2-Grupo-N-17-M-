@@ -99,7 +99,7 @@ namespace TP2_GrupoM
             this.btnAgregarArt.Name = "btnAgregarArt";
             this.btnAgregarArt.Size = new System.Drawing.Size(86, 23);
             this.btnAgregarArt.TabIndex = 2;
-            this.btnAgregarArt.Text = "Agregar...";
+            this.btnAgregarArt.Text = "A&gregar...";
             this.btnAgregarArt.UseVisualStyleBackColor = true;
             this.btnAgregarArt.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -111,7 +111,7 @@ namespace TP2_GrupoM
             this.btnModificarArt.Name = "btnModificarArt";
             this.btnModificarArt.Size = new System.Drawing.Size(86, 23);
             this.btnModificarArt.TabIndex = 3;
-            this.btnModificarArt.Text = "Modificar...";
+            this.btnModificarArt.Text = "M&odificar...";
             this.btnModificarArt.UseVisualStyleBackColor = true;
             this.btnModificarArt.Click += new System.EventHandler(this.btnModificarArt_Click);
             // 
@@ -123,7 +123,7 @@ namespace TP2_GrupoM
             this.btnEliminarArt.Name = "btnEliminarArt";
             this.btnEliminarArt.Size = new System.Drawing.Size(86, 23);
             this.btnEliminarArt.TabIndex = 4;
-            this.btnEliminarArt.Text = "Eliminar...";
+            this.btnEliminarArt.Text = "Eli&minar...";
             this.btnEliminarArt.UseVisualStyleBackColor = true;
             this.btnEliminarArt.Click += new System.EventHandler(this.btnEliminarArt_Click);
             // 
@@ -135,7 +135,7 @@ namespace TP2_GrupoM
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 11;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "S&alir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -180,9 +180,9 @@ namespace TP2_GrupoM
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Location = new System.Drawing.Point(624, 487);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(86, 20);
+            this.btnBuscar.Size = new System.Drawing.Size(86, 23);
             this.btnBuscar.TabIndex = 10;
-            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Text = "B&uscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -305,7 +305,7 @@ namespace TP2_GrupoM
             this.MaximizeBox = false;
             this.Name = "frmVentanaListarArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listado de Articulos";
+            this.Text = "Articulos";
             this.Load += new System.EventHandler(this.frmVentanaListarArticulos_Load);
             this.sstCantidadArticulos.ResumeLayout(false);
             this.sstCantidadArticulos.PerformLayout();

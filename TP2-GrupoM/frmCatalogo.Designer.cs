@@ -53,7 +53,7 @@
             this.btnArticulos.Name = "btnArticulos";
             this.btnArticulos.Size = new System.Drawing.Size(139, 29);
             this.btnArticulos.TabIndex = 1;
-            this.btnArticulos.Text = "Articulos";
+            this.btnArticulos.Text = "A&rticulos";
             this.btnArticulos.UseVisualStyleBackColor = true;
             this.btnArticulos.Click += new System.EventHandler(this.btnArticulos_Click);
             // 
@@ -64,7 +64,7 @@
             this.btnMarcas.Name = "btnMarcas";
             this.btnMarcas.Size = new System.Drawing.Size(139, 29);
             this.btnMarcas.TabIndex = 2;
-            this.btnMarcas.Text = "Marcas";
+            this.btnMarcas.Text = "&Marcas";
             this.btnMarcas.UseVisualStyleBackColor = true;
             this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
             // 
@@ -75,7 +75,7 @@
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(139, 29);
             this.btnCategorias.TabIndex = 3;
-            this.btnCategorias.Text = "Categorias";
+            this.btnCategorias.Text = "&Categorias";
             this.btnCategorias.UseVisualStyleBackColor = true;
             this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
@@ -87,7 +87,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "S&alir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 

@@ -164,7 +164,7 @@
             this.btnAgregarArt.Name = "btnAgregarArt";
             this.btnAgregarArt.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarArt.TabIndex = 7;
-            this.btnAgregarArt.Text = "Aceptar";
+            this.btnAgregarArt.Text = "A&gregar";
             this.btnAgregarArt.UseVisualStyleBackColor = true;
             this.btnAgregarArt.Click += new System.EventHandler(this.btnAgregarArt_Click);
             this.btnAgregarArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
@@ -176,7 +176,7 @@
             this.btnCancelarAgregar.Name = "btnCancelarAgregar";
             this.btnCancelarAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarAgregar.TabIndex = 8;
-            this.btnCancelarAgregar.Text = "Cancelar";
+            this.btnCancelarAgregar.Text = "C&ancelar";
             this.btnCancelarAgregar.UseVisualStyleBackColor = true;
             this.btnCancelarAgregar.Click += new System.EventHandler(this.btnCancelarAgregar_Click);
             // 
@@ -246,7 +246,7 @@
             this.MaximizeBox = false;
             this.Name = "frmAgregarArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "v";
+            this.Text = "Agregar Articulo";
             this.Load += new System.EventHandler(this.frmAgregarArt_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmAgregarArt_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pbxAgregarArt)).EndInit();

@@ -45,7 +45,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "S&alir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -56,7 +56,7 @@
             this.btnEliminarMarca.Name = "btnEliminarMarca";
             this.btnEliminarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarMarca.TabIndex = 3;
-            this.btnEliminarMarca.Text = "Eliminar...";
+            this.btnEliminarMarca.Text = "Eli&minar...";
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
             this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
             // 
@@ -67,7 +67,7 @@
             this.btnModificarMarca.Name = "btnModificarMarca";
             this.btnModificarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnModificarMarca.TabIndex = 2;
-            this.btnModificarMarca.Text = "Modificar...";
+            this.btnModificarMarca.Text = "M&odificar...";
             this.btnModificarMarca.UseVisualStyleBackColor = true;
             this.btnModificarMarca.Click += new System.EventHandler(this.btnModificarMarca_Click);
             // 
@@ -78,7 +78,7 @@
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarMarca.TabIndex = 1;
-            this.btnAgregarMarca.Text = "Agregar...";
+            this.btnAgregarMarca.Text = "A&gregar...";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
             this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
             // 
@@ -124,7 +124,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmMarcas";
+            this.Text = "Marcas";
             this.Load += new System.EventHandler(this.frmMarcas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);

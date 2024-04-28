@@ -25,6 +25,7 @@ namespace TP2_GrupoM
             InitializeComponent();
             this.marca = marca;
             Text = "Modificar Marca";
+            lblAgregarMarca.Text = "Modificar Marca";
         }
 
         private void btnCancelarMarca_Click(object sender, EventArgs e)

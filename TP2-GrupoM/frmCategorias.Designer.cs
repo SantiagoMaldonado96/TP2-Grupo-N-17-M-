@@ -45,7 +45,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "S&alir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -56,7 +56,7 @@
             this.btnEliminarCat.Name = "btnEliminarCat";
             this.btnEliminarCat.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarCat.TabIndex = 3;
-            this.btnEliminarCat.Text = "Eliminar...";
+            this.btnEliminarCat.Text = "Eli&minar...";
             this.btnEliminarCat.UseVisualStyleBackColor = true;
             this.btnEliminarCat.Click += new System.EventHandler(this.btnEliminarCat_Click);
             // 
@@ -67,7 +67,7 @@
             this.btnModificarCat.Name = "btnModificarCat";
             this.btnModificarCat.Size = new System.Drawing.Size(75, 23);
             this.btnModificarCat.TabIndex = 2;
-            this.btnModificarCat.Text = "Modificar...";
+            this.btnModificarCat.Text = "M&odificar...";
             this.btnModificarCat.UseVisualStyleBackColor = true;
             this.btnModificarCat.Click += new System.EventHandler(this.btnModificarCat_Click);
             // 
@@ -78,7 +78,7 @@
             this.btnAgregarCat.Name = "btnAgregarCat";
             this.btnAgregarCat.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarCat.TabIndex = 1;
-            this.btnAgregarCat.Text = "Agregar...";
+            this.btnAgregarCat.Text = "A&gregar...";
             this.btnAgregarCat.UseVisualStyleBackColor = true;
             this.btnAgregarCat.Click += new System.EventHandler(this.btnAgregarCat_Click);
             // 
@@ -124,7 +124,7 @@
             this.MaximizeBox = false;
             this.Name = "frmCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmCategorias";
+            this.Text = "Categorias";
             this.Load += new System.EventHandler(this.frmCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             this.ResumeLayout(false);

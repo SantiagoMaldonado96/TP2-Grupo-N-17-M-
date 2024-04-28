@@ -24,6 +24,7 @@ namespace TP2_GrupoM
             InitializeComponent();
             this.categoria = categoria;
             Text = "Modificar Categoria";
+            lblAgregarMarca.Text = "Modificar Categoria";
         }
 
         private void btnCancelarCat_Click(object sender, EventArgs e)
