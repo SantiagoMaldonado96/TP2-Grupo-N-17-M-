@@ -41,5 +41,63 @@ namespace TP2_GrupoM
         {
             this.Close();
         }
+
+        private void agregarArticulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarArt ventana = new frmAgregarArt();
+            ventana.ShowDialog();
+            
+        }
+
+        private void modificarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBuscarArticuloAModificar ventana = new frmBuscarArticuloAModificar();
+            ventana.ShowDialog();
+
+            
+        }
+
+        private void eliminarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBuscarArticuloAEliminar ventana = new frmBuscarArticuloAEliminar();
+            ventana.ShowDialog();
+     
+        }
+
+        private void eliminarMarcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBuscarMarcaAEliminar ventana = new frmBuscarMarcaAEliminar();
+            ventana.ShowDialog();
+        }
+
+        private void modificarMarcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBuscarMarcaAModificar ventana = new frmBuscarMarcaAModificar();
+            ventana.ShowDialog();
+        }
+
+        private void agregarMarcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarMarca ventana = new frmAgregarMarca();
+            ventana.ShowDialog();
+        }
+
+        private void agregarCategoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarCat ventana = new frmAgregarCat();
+            ventana.ShowDialog();
+        }
+
+        private void modificarCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBuscarCategoriaAModificar ventana = new frmBuscarCategoriaAModificar();
+            ventana.ShowDialog();
+        }
+
+        private void eliminarCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBuscarCategoriaAEliminar ventana = new frmBuscarCategoriaAEliminar();
+            ventana.ShowDialog();
+        }
     }
 }

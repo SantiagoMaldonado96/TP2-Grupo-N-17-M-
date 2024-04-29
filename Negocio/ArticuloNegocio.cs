@@ -58,7 +58,29 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
-        }        
+        }
+
+        public Articulo buscarArticuloPorCodigo(string busqueda)
+        {
+            try
+            {
+
+                foreach (Articulo item in listar())
+                {
+                    if(item.CodigoArticulo.ToLower() == busqueda.ToLower())
+                    {
+                        return item;
+                    }
+                }
+                return null;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
 
         public void agregar(Articulo nuevo)
         {
@@ -156,8 +178,6 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
-
-
 
 
         public List<Articulo> filtroAvanzado(string campo, string criterio, string filtro)
@@ -271,10 +291,10 @@ namespace Negocio
                 }
                 return false;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
 

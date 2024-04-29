@@ -96,5 +96,26 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+        public Categoria buscarCategoriaPorNombre(string busqueda)
+        {
+            try
+            {
+
+                foreach (Categoria item in listar())
+                {
+                    if (item.NombreCategoria.ToLower() == busqueda.ToLower())
+                    {
+                        return item;
+                    }
+                }
+                return null;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

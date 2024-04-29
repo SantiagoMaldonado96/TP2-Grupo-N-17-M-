@@ -64,6 +64,42 @@
     <Compile Include="frmAgregarMarca.Designer.cs">
       <DependentUpon>frmAgregarMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarCategoriaAEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarCategoriaAEliminar.Designer.cs">
+      <DependentUpon>frmBuscarCategoriaAEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarMarcaAEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarMarcaAEliminar.Designer.cs">
+      <DependentUpon>frmBuscarMarcaAEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarArticuloAEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarArticuloAEliminar.Designer.cs">
+      <DependentUpon>frmBuscarArticuloAEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarCategoriaAModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarCategoriaAModificar.Designer.cs">
+      <DependentUpon>frmBuscarCategoriaAModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarMarcaAModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarMarcaAModificar.Designer.cs">
+      <DependentUpon>frmBuscarMarcaAModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarArticuloAModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarArticuloAModificar.Designer.cs">
+      <DependentUpon>frmBuscarArticuloAModificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCatalogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +134,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgregarMarca.resx">
       <DependentUpon>frmAgregarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarCategoriaAEliminar.resx">
+      <DependentUpon>frmBuscarCategoriaAEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarMarcaAEliminar.resx">
+      <DependentUpon>frmBuscarMarcaAEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarArticuloAEliminar.resx">
+      <DependentUpon>frmBuscarArticuloAEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarCategoriaAModificar.resx">
+      <DependentUpon>frmBuscarCategoriaAModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarMarcaAModificar.resx">
+      <DependentUpon>frmBuscarMarcaAModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarArticuloAModificar.resx">
+      <DependentUpon>frmBuscarArticuloAModificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCatalogo.resx">
       <DependentUpon>frmCatalogo.cs</DependentUpon>
