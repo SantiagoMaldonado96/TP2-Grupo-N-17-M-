@@ -39,6 +39,7 @@ namespace TP2_GrupoM
                         {
                             negocio.eliminarCategoria(seleccionado.IdCategoria);
                             MessageBox.Show("Categoria eliminada con exito");
+                            this.Close();
                         }
                         else
                         {
@@ -56,6 +57,7 @@ namespace TP2_GrupoM
 
                 MessageBox.Show(ex.ToString());
             }
+            
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {

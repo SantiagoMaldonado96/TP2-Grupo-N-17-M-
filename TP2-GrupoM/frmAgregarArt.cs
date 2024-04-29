@@ -84,10 +84,10 @@ namespace TP2_GrupoM
 
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
+                MessageBox.Show("Ingrese todos los datos correctamente. ");
 
-                throw ex;
             }
 
             this.Close();

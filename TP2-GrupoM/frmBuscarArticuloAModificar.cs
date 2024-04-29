@@ -33,6 +33,7 @@ namespace TP2_GrupoM
                 {
                     frmAgregarArt ventana = new frmAgregarArt(articulo);
                     ventana.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
