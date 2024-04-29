@@ -35,6 +35,7 @@ namespace TP2_GrupoM
                     {
                         negocio.eliminarArticulo(seleccionado.Id);
                         MessageBox.Show("Articulo eliminado con exito");
+                        this.Close();
                     }
                 }
                 else

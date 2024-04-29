@@ -33,6 +33,7 @@ namespace TP2_GrupoM
                 {
                     frmAgregarMarca ventana = new frmAgregarMarca(seleccionado);
                     ventana.ShowDialog();
+                    this.Close();
                 }
                 else
                 {

@@ -39,6 +39,7 @@ namespace TP2_GrupoM
                         {
                             negocio.eliminarMarca(seleccionado.IdMarca);
                             MessageBox.Show("Marca eliminada con exito");
+                            this.Close();
                         }
                         else
                         {

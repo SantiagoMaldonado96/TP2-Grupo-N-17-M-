@@ -33,6 +33,7 @@ namespace TP2_GrupoM
                 {
                     frmAgregarCat ventana = new frmAgregarCat(seleccionado);
                     ventana.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
