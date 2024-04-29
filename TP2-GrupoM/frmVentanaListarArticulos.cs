@@ -31,6 +31,7 @@ namespace TP2_GrupoM
                 dvgArticulos.DataSource = lista;
                 dvgArticulos.Columns["Imagen"].Visible = false;
                 dvgArticulos.Columns["Id"].Visible = false;
+                dvgArticulos.Columns["Descripcion"].Visible=false;
                 cargarImagen(lista[0].Imagen.UrlImagen);
 
                 stlblNumeroArticulos.Text = negocio.listar().Count().ToString();
@@ -241,5 +242,13 @@ namespace TP2_GrupoM
         {
             cargarDvgArticulos();
         }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            Articulo seleccion = (Articulo)dvgArticulos.CurrentRow.DataBoundItem;
+            frmDetalle ventana = new frmDetalle(seleccion);
+            ventana.ShowDialog();
+        }
+
     }
 }
